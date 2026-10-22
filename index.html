@@ -1,0 +1,2969 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EcoLestari — Kampanye Hidup Minim Sampah & Solusi Keberlanjutan Indonesia</title>
+  
+  <!-- SEO & Social Meta Tags -->
+  <meta name="description" content="Bergabung bersama ribuan masyarakat Indonesia dalam gerakan Zero Waste Lifestyle. Dapatkan edukasi pemilahan sampah, panduan upcycling kreatif, starter kit ramah lingkungan, dan konsultasi AI 24/7.">
+  <meta name="keywords" content="zero waste indonesia, hidup minim sampah, sustainability, upcycling kaos bekas, produk ramah lingkungan, komposting rumahan, konsultasi ai lingkungan, ecolestari">
+  <meta name="author" content="EcoLestari Indonesia">
+  <meta name="theme-color" content="#2D6A4F">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://ecolestari.id/">
+  <meta property="og:title" content="EcoLestari — Langkah Kecil Hari Ini, Nafas Panjang Bagi Bumi">
+  <meta property="og:description" content="Gerakan hidup minim sampah terpadu di Indonesia. Edukasi, panduan DIY upcycling, starter kit bebas plastik, dan asisten AI konsultasi zero waste.">
+  <meta property="og:image" content="assets/images/hero-zero-waste.jpg">
+
+  <!-- Google Fonts: Plus Jakarta Sans & Outfit -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            forest: {
+              900: '#081C15',
+              850: '#0F2E23',
+              800: '#1B4332',
+              700: '#2D6A4F',
+              600: '#40916C',
+              500: '#52B788',
+              400: '#74C69D',
+              300: '#95D5B2',
+              200: '#B7E4C7',
+              100: '#D8F3DC',
+              50: '#F0F9F4',
+            },
+            sage: '#2D6A4F',
+            mint: '#52B788',
+            mintlight: '#D8F3DC',
+            cream: '#F8F9FA',
+            warmcream: '#FAF9F6',
+            earth: '#E07A5F',
+            warmgold: '#D4A373'
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'system-ui', '-apple-system', 'sans-serif'],
+            display: ['"Outfit"', 'sans-serif']
+          },
+          boxShadow: {
+            'soft': '0 10px 30px -5px rgba(45, 106, 79, 0.08)',
+            'glow': '0 0 25px -5px rgba(82, 183, 136, 0.4)',
+            'card': '0 4px 20px -2px rgba(0, 0, 0, 0.04), 0 2px 6px -1px rgba(0, 0, 0, 0.02)'
+          },
+          keyframes: {
+            float: {
+              '0%, 100%': { transform: 'translateY(0px)' },
+              '50%': { transform: 'translateY(-8px)' }
+            },
+            pulseSubtle: {
+              '0%, 100%': { opacity: '1', transform: 'scale(1)' },
+              '50%': { opacity: '0.85', transform: 'scale(1.03)' }
+            }
+          },
+          animation: {
+            'float': 'float 4s ease-in-out infinite',
+            'pulse-subtle': 'pulseSubtle 2.5s ease-in-out infinite'
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Schema.org JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "NGO",
+    "name": "EcoLestari",
+    "url": "https://ecolestari.id",
+    "logo": "https://ecolestari.id/assets/images/logo.png",
+    "description": "Kampanye hidup minim sampah (Zero Waste Lifestyle) dan solusi keberlanjutan terpadu di Indonesia.",
+    "sameAs": [
+      "https://instagram.com/EcoLestari.ID",
+      "https://tiktok.com/@EcoLestari",
+      "https://youtube.com/@EcoLestari"
+    ]
+  }
+  </script>
+
+  <style>
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 10px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #F0F9F4;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #74C69D;
+      border-radius: 5px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #2D6A4F;
+    }
+    .glass-nav {
+      background: rgba(255, 255, 255, 0.88);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+    }
+    .glass-card {
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+    }
+    .text-gradient {
+      background: linear-gradient(135deg, #1B4332 0%, #2D6A4F 50%, #52B788 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .text-gradient-gold {
+      background: linear-gradient(135deg, #D4A373 0%, #E07A5F 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    /* Typing indicator animation */
+    .typing-dot {
+      animation: typingAnimation 1.4s infinite ease-in-out both;
+    }
+    .typing-dot:nth-child(1) { animation-delay: -0.32s; }
+    .typing-dot:nth-child(2) { animation-delay: -0.16s; }
+    @keyframes typingAnimation {
+      0%, 80%, 100% { transform: scale(0); opacity: 0.4; }
+      40% { transform: scale(1); opacity: 1; }
+    }
+  </style>
+</head>
+<body class="bg-warmcream text-slate-800 font-sans antialiased selection:bg-forest-100 selection:text-forest-800">
+
+  <!-- ==================== 1. NAVBAR ==================== -->
+  <header class="fixed top-0 left-0 right-0 z-40 transition-all duration-300 glass-nav border-b border-emerald-100/70" id="main-header">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        
+        <!-- Brand Logo -->
+        <a href="#hero" class="flex items-center gap-3 group focus:outline-none">
+          <div class="w-11 h-11 rounded-2xl bg-gradient-to-tr from-forest-800 via-forest-700 to-forest-500 flex items-center justify-center text-white shadow-md shadow-forest-800/20 group-hover:scale-105 transition-transform">
+            <!-- Leaf SVG Icon -->
+            <svg class="w-6 h-6 transform -rotate-12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/>
+              <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/>
+            </svg>
+          </div>
+          <div class="flex flex-col">
+            <span class="font-display font-extrabold text-2xl tracking-tight text-forest-900 flex items-center gap-1">
+              Eco<span class="text-forest-600">Lestari</span>
+              <span class="w-2 h-2 rounded-full bg-forest-500 inline-block"></span>
+            </span>
+            <span class="text-[10px] uppercase font-bold tracking-widest text-forest-700/80 -mt-1">Zero Waste ID</span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <nav class="hidden lg:flex items-center gap-1 xl:gap-2">
+          <a href="#hero" class="nav-link px-3.5 py-2 rounded-xl text-sm font-semibold text-slate-700 hover:text-forest-700 hover:bg-forest-50/70 transition-colors">Beranda</a>
+          <a href="#edukasi" class="nav-link px-3.5 py-2 rounded-xl text-sm font-semibold text-slate-700 hover:text-forest-700 hover:bg-forest-50/70 transition-colors">Edukasi</a>
+          <a href="#upcycling" class="nav-link px-3.5 py-2 rounded-xl text-sm font-semibold text-slate-700 hover:text-forest-700 hover:bg-forest-50/70 transition-colors">Pemanfaatan Barang Bekas</a>
+          <a href="#produk" class="nav-link px-3.5 py-2 rounded-xl text-sm font-semibold text-slate-700 hover:text-forest-700 hover:bg-forest-50/70 transition-colors">Produk Hijau</a>
+          <a href="#konsultasi-ai" class="nav-link px-3.5 py-2 rounded-xl text-sm font-semibold text-slate-700 hover:text-forest-700 hover:bg-forest-50/70 transition-colors flex items-center gap-1.5">
+            <span>Konsultasi AI</span>
+            <span class="inline-flex items-center px-1.5 py-0.5 rounded-full text-[10px] font-bold bg-forest-100 text-forest-800 animate-pulse">Live</span>
+          </a>
+        </nav>
+
+        <!-- Right Action Buttons -->
+        <div class="hidden sm:flex items-center gap-3">
+          <!-- Cart Drawer Trigger Button -->
+          <button id="open-cart-btn" aria-label="Buka Keranjang Belanja" class="relative p-2.5 rounded-xl text-forest-800 hover:bg-forest-50 transition-colors border border-forest-200/60 focus:outline-none">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/>
+            </svg>
+            <span id="cart-badge" class="absolute -top-1 -right-1 bg-earth text-white font-bold text-xs w-5 h-5 rounded-full flex items-center justify-center scale-0 transition-transform">0</span>
+          </button>
+
+          <!-- CTA: Mulai Konsultasi -->
+          <a href="#konsultasi-ai" onclick="focusChatInput()" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl font-semibold text-sm text-white bg-gradient-to-r from-forest-800 via-forest-700 to-forest-600 hover:from-forest-900 hover:to-forest-700 shadow-md shadow-forest-800/20 hover:shadow-lg hover:shadow-forest-800/30 active:scale-95 transition-all">
+            <svg class="w-4 h-4 text-forest-300" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M18 10c0 3.866-3.582 7-8 7a8.841 8.841 0 01-4.083-.98L2 17l1.338-3.123C2.493 12.767 2 11.434 2 10c0-3.866 3.582-7 8-7s8 3.134 8 7zM7 9H5v2h2V9zm8 0h-2v2h2V9zM9 9h2v2H9V9z" clip-rule="evenodd"/>
+            </svg>
+            <span>Mulai Konsultasi</span>
+          </a>
+        </div>
+
+        <!-- Mobile Hamburger Button -->
+        <button id="mobile-menu-btn" aria-label="Buka Menu Navigasi" class="lg:hidden p-2.5 rounded-xl text-slate-700 hover:text-forest-800 hover:bg-forest-50 focus:outline-none transition-colors">
+          <svg id="hamburger-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"/>
+          </svg>
+          <svg id="close-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+          </svg>
+        </button>
+
+      </div>
+    </div>
+
+    <!-- Mobile Dropdown Navigation -->
+    <div id="mobile-menu" class="hidden lg:hidden border-t border-emerald-100 bg-white/95 backdrop-blur-xl px-4 pt-4 pb-6 space-y-2 shadow-xl">
+      <a href="#hero" class="mobile-nav-link block px-4 py-2.5 rounded-xl font-medium text-slate-700 hover:bg-forest-50 hover:text-forest-800">Beranda</a>
+      <a href="#edukasi" class="mobile-nav-link block px-4 py-2.5 rounded-xl font-medium text-slate-700 hover:bg-forest-50 hover:text-forest-800">Edukasi</a>
+      <a href="#upcycling" class="mobile-nav-link block px-4 py-2.5 rounded-xl font-medium text-slate-700 hover:bg-forest-50 hover:text-forest-800">Pemanfaatan Barang Bekas</a>
+      <a href="#produk" class="mobile-nav-link block px-4 py-2.5 rounded-xl font-medium text-slate-700 hover:bg-forest-50 hover:text-forest-800">Produk Hijau</a>
+      <a href="#konsultasi-ai" class="mobile-nav-link block px-4 py-2.5 rounded-xl font-medium text-slate-700 hover:bg-forest-50 hover:text-forest-800 flex items-center justify-between">
+        <span>Konsultasi AI</span>
+        <span class="px-2 py-0.5 text-xs font-semibold rounded-full bg-forest-100 text-forest-800">24/7 AI Bot</span>
+      </a>
+      <div class="pt-3 border-t border-slate-100 flex flex-col gap-2">
+        <a href="#konsultasi-ai" onclick="focusChatInput()" class="w-full text-center py-3 rounded-xl font-semibold text-sm text-white bg-forest-800 shadow-md">
+          Mulai Konsultasi AI
+        </a>
+      </div>
+    </div>
+  </header>
+
+
+  <!-- ==================== 2. HERO SECTION ==================== -->
+  <section id="hero" class="relative pt-32 pb-20 lg:pt-40 lg:pb-32 overflow-hidden bg-gradient-to-b from-forest-50/60 via-warmcream to-warmcream">
+    
+    <!-- Ambient ecological glowing background circles -->
+    <div class="absolute top-10 left-1/2 -translate-x-1/2 w-[700px] h-[500px] bg-gradient-to-tr from-forest-200/40 via-mintlight/30 to-transparent rounded-full blur-3xl -z-10 pointer-events-none"></div>
+    <div class="absolute -top-24 right-10 w-96 h-96 bg-forest-300/20 rounded-full blur-3xl -z-10 pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+        
+        <!-- Left Content (Copywriting & CTA) -->
+        <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+          
+          <!-- Status Badge -->
+          <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-forest-100/90 border border-forest-300/70 text-forest-800 text-xs sm:text-sm font-semibold tracking-wide shadow-sm animate-pulse-subtle">
+            <span class="w-2 h-2 rounded-full bg-forest-600 animate-ping"></span>
+            <span>🌱 100% Ramah Lingkungan & Biodegradable</span>
+          </div>
+
+          <!-- Headline -->
+          <h1 class="font-display font-extrabold text-4xl sm:text-5xl lg:text-6xl text-forest-900 leading-[1.15] tracking-tight">
+            Langkah Kecil Hari Ini, <br class="hidden sm:inline">
+            <span class="text-gradient">Nafas Panjang Bagi Bumi.</span>
+          </h1>
+
+          <!-- Subheadline -->
+          <p class="text-slate-600 text-base sm:text-lg lg:text-xl font-normal leading-relaxed max-w-2xl mx-auto lg:mx-0">
+            Bergabung bersama ribuan masyarakat Indonesia dalam gerakan hidup minim sampah (<strong class="font-semibold text-forest-800">Zero Waste Lifestyle</strong>). Mulai dari kebiasaan sederhana di rumah tanpa repot dan tanpa biaya mahal.
+          </p>
+
+          <!-- Dual CTA Buttons -->
+          <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
+            <!-- CTA 1: Tanya AI Konsultan -->
+            <a href="#konsultasi-ai" onclick="focusChatInput()" class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-7 py-3.5 rounded-2xl font-bold text-base text-white bg-gradient-to-r from-forest-800 via-forest-700 to-forest-600 hover:from-forest-900 hover:to-forest-800 shadow-xl shadow-forest-800/25 hover:shadow-2xl hover:shadow-forest-800/35 hover:-translate-y-0.5 active:translate-y-0 transition-all">
+              <svg class="w-5 h-5 text-forest-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
+              </svg>
+              <span>Tanya AI Konsultan</span>
+            </a>
+
+            <!-- CTA 2: Jelajahi Produk Ramah Lingkungan -->
+            <a href="#produk" class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-7 py-3.5 rounded-2xl font-bold text-base text-forest-800 bg-white hover:bg-forest-50/80 border-2 border-forest-200 hover:border-forest-400 shadow-sm hover:shadow-md transition-all">
+              <svg class="w-5 h-5 text-forest-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/>
+              </svg>
+              <span>Jelajahi Produk Ramah Lingkungan</span>
+            </a>
+          </div>
+
+          <!-- Social Proof / Trust Badge -->
+          <div class="pt-4 flex flex-wrap items-center justify-center lg:justify-start gap-4 text-xs sm:text-sm text-slate-500">
+            <div class="flex -space-x-2">
+              <div class="w-9 h-9 rounded-full ring-2 ring-white bg-emerald-200 flex items-center justify-center font-bold text-forest-800 text-xs">ND</div>
+              <div class="w-9 h-9 rounded-full ring-2 ring-white bg-amber-200 flex items-center justify-center font-bold text-amber-900 text-xs">AR</div>
+              <div class="w-9 h-9 rounded-full ring-2 ring-white bg-teal-200 flex items-center justify-center font-bold text-teal-800 text-xs">SP</div>
+              <div class="w-9 h-9 rounded-full ring-2 ring-white bg-forest-600 flex items-center justify-center font-bold text-white text-xs">+12k</div>
+            </div>
+            <div>
+              <div class="flex items-center text-amber-400">
+                <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                <span class="ml-1.5 font-bold text-slate-700">4.9 / 5</span>
+              </div>
+              <p class="text-xs text-slate-500">Dipercaya 12.000+ Pejuang Zero Waste Indonesia</p>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Right Visual (Hero Image with Floating Badges) -->
+        <div class="lg:col-span-5 relative">
+          <div class="relative mx-auto max-w-md lg:max-w-none">
+            
+            <!-- Glow background decorative aura -->
+            <div class="absolute -inset-4 bg-gradient-to-r from-forest-500/20 to-mint/30 rounded-3xl blur-2xl -z-10"></div>
+
+            <!-- Main Hero Image Frame -->
+            <div class="overflow-hidden rounded-3xl shadow-2xl border-4 border-white/80 bg-white group">
+              <img 
+                src="assets/images/hero-zero-waste.jpg" 
+                alt="Starter kit gaya hidup zero waste dan ramah lingkungan EcoLestari" 
+                class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700"
+                loading="eager"
+              >
+            </div>
+
+            <!-- Floating Impact Badge 1 (Bottom Left) -->
+            <div class="absolute -bottom-5 -left-4 sm:-left-6 glass-card p-3.5 sm:p-4 rounded-2xl border border-emerald-100 shadow-xl flex items-center gap-3 animate-float">
+              <div class="w-11 h-11 rounded-xl bg-forest-100 flex items-center justify-center text-forest-700 font-bold">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                </svg>
+              </div>
+              <div>
+                <p class="text-[11px] font-semibold text-slate-500 uppercase tracking-wider">Sampah Tercegah</p>
+                <p class="text-lg sm:text-xl font-extrabold text-forest-900 font-display">12.450+ Kg</p>
+              </div>
+            </div>
+
+            <!-- Floating Badge 2 (Top Right) -->
+            <div class="absolute -top-5 -right-4 sm:-right-6 glass-card px-4 py-2.5 rounded-2xl border border-emerald-100 shadow-xl flex items-center gap-2">
+              <span class="flex h-3 w-3 relative">
+                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-forest-400 opacity-75"></span>
+                <span class="relative inline-flex rounded-full h-3 w-3 bg-forest-600"></span>
+              </span>
+              <span class="text-xs font-bold text-forest-900">Bebas Plastik Sekali Pakai</span>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==================== 3. STATISTIK DAMPAK & EDUKASI ==================== -->
+  <section id="edukasi" class="py-24 bg-white relative border-y border-emerald-100/60">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+        <span class="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-forest-100 text-forest-800">
+          Data & Fakta Krisis Sampah
+        </span>
+        <h2 class="font-display font-extrabold text-3xl sm:text-4xl lg:text-5xl text-forest-900 tracking-tight">
+          Mengapa Kita Harus Mulai Hari Ini?
+        </h2>
+        <p class="text-slate-600 text-base sm:text-lg">
+          Krisis sampah plastik di Indonesia bukan lagi ancaman masa depan, melainkan darurat nyata yang mencemari lautan, tanah, dan air minum kita.
+        </p>
+      </div>
+
+      <!-- 3 Stat Cards (Fakta Sampah di Indonesia) -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
+        
+        <!-- Stat Card 1 -->
+        <div class="relative bg-gradient-to-br from-forest-50/70 to-white p-8 rounded-3xl border border-emerald-100/90 shadow-card hover:shadow-xl transition-all duration-300 group hover:-translate-y-1">
+          <div class="w-14 h-14 rounded-2xl bg-forest-100 text-forest-700 flex items-center justify-center mb-6 group-hover:bg-forest-700 group-hover:text-white transition-colors">
+            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
+            </svg>
+          </div>
+          <div class="flex items-baseline gap-2 mb-2">
+            <span class="font-display font-black text-5xl text-forest-900 counter" data-target="0.7">0,7</span>
+            <span class="font-bold text-xl text-forest-700">kg / orang</span>
+          </div>
+          <h3 class="font-bold text-lg text-slate-800 mb-2">Produksi Sampah Harian per Orang</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">
+            Setiap individu di Indonesia menghasilkan rata-rata 0,7 kg sampah per hari. Setara dengan 2 hingga 3 kantong kresek penuh setiap harinya.
+          </p>
+          <div class="mt-4 pt-4 border-t border-emerald-100 text-xs font-semibold text-forest-700 flex items-center gap-1">
+            <span>Sumber: KLHK RI</span>
+          </div>
+        </div>
+
+        <!-- Stat Card 2 -->
+        <div class="relative bg-gradient-to-br from-forest-50/70 to-white p-8 rounded-3xl border border-emerald-100/90 shadow-card hover:shadow-xl transition-all duration-300 group hover:-translate-y-1">
+          <div class="w-14 h-14 rounded-2xl bg-earth/10 text-earth flex items-center justify-center mb-6 group-hover:bg-earth group-hover:text-white transition-colors">
+            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/>
+            </svg>
+          </div>
+          <div class="flex items-baseline gap-2 mb-2">
+            <span class="font-display font-black text-5xl text-forest-900 counter" data-target="68">68</span>
+            <span class="font-bold text-xl text-earth">Juta Ton / Thn</span>
+          </div>
+          <h3 class="font-bold text-lg text-slate-800 mb-2">Timbunan Sampah Nasional</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">
+            Lebih dari 69% timbunan sampah nasional berakhir menumpuk di Tempat Pemrosesan Akhir (TPA) dan mencemari ekosistem sungai serta laut Nusantara.
+          </p>
+          <div class="mt-4 pt-4 border-t border-emerald-100 text-xs font-semibold text-earth flex items-center gap-1">
+            <span>Darurat TPA Indonesia</span>
+          </div>
+        </div>
+
+        <!-- Stat Card 3 -->
+        <div class="relative bg-gradient-to-br from-forest-50/70 to-white p-8 rounded-3xl border border-emerald-100/90 shadow-card hover:shadow-xl transition-all duration-300 group hover:-translate-y-1">
+          <div class="w-14 h-14 rounded-2xl bg-amber-100 text-amber-700 flex items-center justify-center mb-6 group-hover:bg-amber-600 group-hover:text-white transition-colors">
+            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+          </div>
+          <div class="flex items-baseline gap-2 mb-2">
+            <span class="font-display font-black text-5xl text-forest-900 counter" data-target="100">100+</span>
+            <span class="font-bold text-xl text-amber-600">Tahun</span>
+          </div>
+          <h3 class="font-bold text-lg text-slate-800 mb-2">Waktu Plastik Terurai</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">
+            Satu botol atau sedotan plastik bertahan berabad-abad dan tidak pernah benar-benar musnah, hanya hancur menjadi mikroplastik berbahaya bagi kesehatan.
+          </p>
+          <div class="mt-4 pt-4 border-t border-emerald-100 text-xs font-semibold text-amber-700 flex items-center gap-1">
+            <span>Ancaman Rantai Makanan</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Edukasi: 3 Langkah Awal Menuju Zero Waste -->
+      <div class="bg-gradient-to-br from-forest-850 to-forest-900 rounded-3xl p-8 sm:p-12 text-white shadow-2xl relative overflow-hidden">
+        <!-- Background decorative wave -->
+        <div class="absolute -right-20 -bottom-20 w-96 h-96 bg-forest-600/20 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="max-w-3xl mb-12">
+          <span class="text-forest-300 text-xs uppercase font-extrabold tracking-widest">Panduan Praktis Pemula</span>
+          <h3 class="font-display font-extrabold text-2xl sm:text-3xl lg:text-4xl text-white mt-1">
+            3 Langkah Awal: Mulai dari Rumah Hari Ini
+          </h3>
+          <p class="text-slate-300 text-sm sm:text-base mt-2">
+            Zero waste bukan tentang langsung 100% sempurna tanpa sampah, melainkan komitmen jutaan orang melakukan hal sederhana secara konsisten.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          
+          <!-- Step 1: Bawa Wadah Sendiri -->
+          <div class="bg-white/10 backdrop-blur-md p-6 rounded-2xl border border-white/15 hover:bg-white/15 transition-all">
+            <div class="flex items-center justify-between mb-4">
+              <span class="w-10 h-10 rounded-xl bg-forest-400 text-forest-950 font-black flex items-center justify-center font-display text-lg">01</span>
+              <span class="text-2xl">🎒</span>
+            </div>
+            <h4 class="font-bold text-lg text-white mb-2">Bawa Wadah Sendiri (BYO)</h4>
+            <p class="text-slate-300 text-xs sm:text-sm leading-relaxed">
+              Selalu siapkan tumbler air minum, wadah bekal, dan tas belanja kain lipat di tas harian Anda sebelum bepergian atau berbelanja ke pasar.
+            </p>
+            <div class="mt-4 pt-3 border-t border-white/10 text-xs text-forest-300 font-semibold">
+              ✓ Menghemat 200+ botol plastik / tahun
+            </div>
+          </div>
+
+          <!-- Step 2: Tolak Sekali Pakai -->
+          <div class="bg-white/10 backdrop-blur-md p-6 rounded-2xl border border-white/15 hover:bg-white/15 transition-all">
+            <div class="flex items-center justify-between mb-4">
+              <span class="w-10 h-10 rounded-xl bg-forest-400 text-forest-950 font-black flex items-center justify-center font-display text-lg">02</span>
+              <span class="text-2xl">🛑</span>
+            </div>
+            <h4 class="font-bold text-lg text-white mb-2">Tolak Sekali Pakai (Refuse)</h4>
+            <p class="text-slate-300 text-xs sm:text-sm leading-relaxed">
+              Katakan dengan sopan: <em>"Terima kasih, tidak usah sedotan dan kantong kresek ya"</em> saat bertransaksi di kafe, restoran, dan kasir minimarket.
+            </p>
+            <div class="mt-4 pt-3 border-t border-white/10 text-xs text-forest-300 font-semibold">
+              ✓ Kurangi limbah mikroplastik instan
+            </div>
+          </div>
+
+          <!-- Step 3: Pilah dari Dapur -->
+          <div class="bg-white/10 backdrop-blur-md p-6 rounded-2xl border border-white/15 hover:bg-white/15 transition-all">
+            <div class="flex items-center justify-between mb-4">
+              <span class="w-10 h-10 rounded-xl bg-forest-400 text-forest-950 font-black flex items-center justify-center font-display text-lg">03</span>
+              <span class="text-2xl">🥬</span>
+            </div>
+            <h4 class="font-bold text-lg text-white mb-2">Pilah dari Dapur (Sort)</h4>
+            <p class="text-slate-300 text-xs sm:text-sm leading-relaxed">
+              Pisahkan sisa sayur/buah organik untuk dikomposkan di rumah, bersihkan kardus/botol untuk bank sampah, dan minimalkan residu ke TPA.
+            </p>
+            <div class="mt-4 pt-3 border-t border-white/10 text-xs text-forest-300 font-semibold">
+              ✓ 60% sampah rumah tangga adalah organik
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Interactive Eco Impact Calculator -->
+        <div class="mt-12 pt-8 border-t border-white/15">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            <div class="lg:col-span-5 space-y-2">
+              <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-forest-500/30 text-forest-200">
+                <span>⚡ Fitur Interaktif</span>
+              </div>
+              <h4 class="font-display font-bold text-xl sm:text-2xl text-white">
+                Kalkulator Jejak Hemat Sampahmu
+              </h4>
+              <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+                Geser estimasi kebiasaan harianmu di bawah ini untuk melihat perkiraan dampak nyata yang kamu berikan bagi bumi dalam 1 tahun!
+              </p>
+            </div>
+
+            <div class="lg:col-span-7 bg-white/10 backdrop-blur-lg p-6 rounded-2xl border border-white/20">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
+                <div>
+                  <div class="flex justify-between text-xs font-semibold text-slate-200 mb-1">
+                    <span>Tolak Kantong Kresek/Mgg</span>
+                    <span id="slider-val-bags" class="text-forest-300 font-bold">5 kali</span>
+                  </div>
+                  <input type="range" id="slider-bags" min="0" max="25" value="5" class="w-full accent-forest-400 h-2 bg-white/20 rounded-lg cursor-pointer">
+                </div>
+                <div>
+                  <div class="flex justify-between text-xs font-semibold text-slate-200 mb-1">
+                    <span>Bawa Botol Minum/Mgg</span>
+                    <span id="slider-val-bottles" class="text-forest-300 font-bold">7 hari</span>
+                  </div>
+                  <input type="range" id="slider-bottles" min="0" max="7" value="7" class="w-full accent-forest-400 h-2 bg-white/20 rounded-lg cursor-pointer">
+                </div>
+              </div>
+
+              <!-- Realtime Result Badges -->
+              <div class="grid grid-cols-3 gap-3 pt-3 border-t border-white/15 text-center">
+                <div class="bg-black/20 p-2.5 rounded-xl">
+                  <div id="calc-plastic-saved" class="text-lg sm:text-xl font-extrabold text-forest-300 font-display">624</div>
+                  <div class="text-[10px] text-slate-300">Plastik Tercegah/Thn</div>
+                </div>
+                <div class="bg-black/20 p-2.5 rounded-xl">
+                  <div id="calc-carbon-saved" class="text-lg sm:text-xl font-extrabold text-forest-300 font-display">37.4 kg</div>
+                  <div class="text-[10px] text-slate-300">Emisi CO2 Berkurang</div>
+                </div>
+                <div class="bg-black/20 p-2.5 rounded-xl">
+                  <div id="calc-money-saved" class="text-lg sm:text-xl font-extrabold text-forest-300 font-display">Rp 1,2 Jt</div>
+                  <div class="text-[10px] text-slate-300">Estimasi Uang Hemat</div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ==================== 4. PEMANFAATAN BARANG BEKAS (UPCYCLING DIY) ==================== -->
+  <section id="upcycling" class="py-24 bg-warmcream relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto mb-14 space-y-3">
+        <span class="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-forest-100 text-forest-800">
+          Kreativitas Berkelanjutan
+        </span>
+        <h2 class="font-display font-extrabold text-3xl sm:text-4xl lg:text-5xl text-forest-900 tracking-tight">
+          Pemanfaatan Barang Bekas (Upcycling DIY)
+        </h2>
+        <p class="text-slate-600 text-base sm:text-lg">
+          Jangan langsung buang ke tempat sampah! Ubah barang lama di lemarimu menjadi perkakas estetik dan berguna dengan panduan kreatif langkah demi langkah berikut.
+        </p>
+      </div>
+
+      <!-- Tab Switcher -->
+      <div class="flex justify-center mb-10">
+        <div class="inline-flex p-1.5 rounded-2xl bg-white border border-emerald-100 shadow-sm gap-2">
+          <button id="tab-btn-tshirt" onclick="switchDiyTab('tshirt')" class="px-5 sm:px-8 py-2.5 rounded-xl font-bold text-sm transition-all bg-forest-800 text-white shadow-md">
+            👕 Kaos Bekas → Tas Belanja
+          </button>
+          <button id="tab-btn-jar" onclick="switchDiyTab('jar')" class="px-5 sm:px-8 py-2.5 rounded-xl font-bold text-sm transition-all text-slate-600 hover:text-forest-800 hover:bg-forest-50">
+            🫙 Botol Kaca → Wadah Bumbu Estetik
+          </button>
+        </div>
+      </div>
+
+      <!-- DIY Container -->
+      <div class="bg-white rounded-3xl border border-emerald-100 shadow-xl overflow-hidden">
+        
+        <!-- ================= TAB 1: KAOS BEKAS -> TAS BELANJA ================= -->
+        <div id="diy-tshirt-content" class="grid grid-cols-1 lg:grid-cols-12">
+          
+          <!-- Visual & Specs Column -->
+          <div class="lg:col-span-5 bg-forest-50/60 p-6 sm:p-10 flex flex-col justify-between border-b lg:border-b-0 lg:border-r border-emerald-100">
+            <div>
+              <div class="overflow-hidden rounded-2xl shadow-md mb-6 relative group">
+                <img 
+                  src="assets/images/diy-upcycling.jpg" 
+                  alt="Panduan DIY upcycling kaos bekas menjadi tas belanja dan botol kaca bumbu" 
+                  class="w-full h-64 sm:h-72 object-cover transform group-hover:scale-105 transition-transform duration-500"
+                >
+                <div class="absolute top-3 left-3 bg-forest-900/85 backdrop-blur-md text-white text-xs font-bold px-3 py-1 rounded-full">
+                  ⏱️ 10 Menit Saja
+                </div>
+                <div class="absolute bottom-3 right-3 bg-white/90 backdrop-blur-md text-forest-900 text-xs font-extrabold px-3 py-1 rounded-full shadow">
+                  ✂️ Tanpa Mesin Jahit
+                </div>
+              </div>
+
+              <h3 class="font-display font-extrabold text-2xl text-forest-900 mb-2">
+                No-Sew T-Shirt Market Bag
+              </h3>
+              <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                Ubah kaos oblong katun yang sudah usang atau kekecilan menjadi tas belanja super kuat yang mampu menahan beban belanja sayur hingga 8 kg!
+              </p>
+
+              <!-- Bahan-Bahan Diperlukan -->
+              <div class="bg-white p-4 rounded-xl border border-emerald-100 mb-4">
+                <h4 class="font-bold text-xs uppercase tracking-wider text-forest-800 mb-2.5 flex items-center gap-1.5">
+                  <svg class="w-4 h-4 text-forest-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                  Alat & Bahan Siap Pakai:
+                </h4>
+                <ul class="text-xs text-slate-700 space-y-1.5">
+                  <li class="flex items-center gap-2"><span>•</span> 1 Kaos katun bekas (semakin tebal semakin kokoh)</li>
+                  <li class="flex items-center gap-2"><span>•</span> Gunting kain yang tajam</li>
+                  <li class="flex items-center gap-2"><span>•</span> Penggaris atau spidol kecil (opsional)</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Pro Tip Note -->
+            <div class="p-3.5 bg-mintlight/60 rounded-xl border border-forest-200 text-xs text-forest-900">
+              💡 <strong>Pro Tip:</strong> Kaos katun memiliki sifat elastis alami. Semakin banyak muatan belanjaan Anda, jaring tas akan meregang secara fleksibel tanpa mudah robek!
+            </div>
+          </div>
+
+          <!-- Step-by-Step Interactive Guide Column -->
+          <div class="lg:col-span-7 p-6 sm:p-10 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between pb-6 border-b border-slate-100 mb-8">
+                <div>
+                  <span class="text-xs font-bold text-forest-700 uppercase tracking-widest">Tutorial Lengkap</span>
+                  <h4 class="text-xl font-bold text-slate-900">4 Langkah Mudah Membuatnya</h4>
+                </div>
+                <span class="px-3 py-1 rounded-full text-xs font-semibold bg-forest-100 text-forest-800">
+                  Tingkat: Sangat Mudah
+                </span>
+              </div>
+
+              <!-- Steps List -->
+              <div class="space-y-6">
+                
+                <!-- Step 1 -->
+                <div class="flex items-start gap-4 group">
+                  <div class="w-9 h-9 rounded-xl bg-forest-100 text-forest-800 font-bold flex items-center justify-center shrink-0 group-hover:bg-forest-700 group-hover:text-white transition-colors">
+                    1
+                  </div>
+                  <div>
+                    <h5 class="font-bold text-base text-slate-900 mb-1">Gunting Kedua Lengan Kaos</h5>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                      Bentangkan kaos secara rata di meja. Gunting kedua lengan baju tepat di batas garis jahitan bahu. Lubang ini nantinya akan menjadi pegangan tas belanja Anda.
+                    </p>
+                  </div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="flex items-start gap-4 group">
+                  <div class="w-9 h-9 rounded-xl bg-forest-100 text-forest-800 font-bold flex items-center justify-center shrink-0 group-hover:bg-forest-700 group-hover:text-white transition-colors">
+                    2
+                  </div>
+                  <div>
+                    <h5 class="font-bold text-base text-slate-900 mb-1">Gunting Kerah Leher Kaos</h5>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                      Potong bagian kerah leher kaos membentuk lengkungan oval yang lebih dalam (sekitar 5-7 cm). Bagian ini akan menjadi bukaan utama tas tempat memasukkan barang belanjaan.
+                    </p>
+                  </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="flex items-start gap-4 group">
+                  <div class="w-9 h-9 rounded-xl bg-forest-100 text-forest-800 font-bold flex items-center justify-center shrink-0 group-hover:bg-forest-700 group-hover:text-white transition-colors">
+                    3
+                  </div>
+                  <div>
+                    <h5 class="font-bold text-base text-slate-900 mb-1">Buat Rumbai di Bagian Bawah Kaos</h5>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                      Potong rumbai vertikal di sepanjang keliman bawah kaos dengan lebar masing-masing 2 cm dan panjang 8-10 cm. Pastikan lapisan kain depan dan belakang terpotong serasi.
+                    </p>
+                  </div>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="flex items-start gap-4 group">
+                  <div class="w-9 h-9 rounded-xl bg-forest-100 text-forest-800 font-bold flex items-center justify-center shrink-0 group-hover:bg-forest-700 group-hover:text-white transition-colors">
+                    4
+                  </div>
+                  <div>
+                    <h5 class="font-bold text-base text-slate-900 mb-1">Ikat Simpul Ganda (Double-Knot)</h5>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                      Ikat setiap pasangan rumbai depan dan belakang dengan simpul ganda yang kencang. Selesai! Jika ingin rumbai tersembunyi di dalam, baliklah kaos Anda ke posisi awal.
+                    </p>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <!-- Action buttons -->
+            <div class="pt-8 mt-8 border-t border-slate-100 flex flex-wrap items-center justify-between gap-4">
+              <div class="flex items-center gap-2 text-xs text-slate-500">
+                <span class="text-forest-600 font-bold">✓ 0 Emisi Karbon</span>
+                <span>•</span>
+                <span>Dapat Dicuci Berulang Kali</span>
+              </div>
+              <button onclick="openDiyModal('tshirt')" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl font-bold text-xs sm:text-sm text-forest-800 bg-forest-50 hover:bg-forest-100 border border-forest-200 transition-colors">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"/></svg>
+                <span>Cetak / Simpan Ringkasan Panduan</span>
+              </button>
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <!-- ================= TAB 2: BOTOL KACA -> WADAH BUMBU ESTETIK ================= -->
+        <div id="diy-jar-content" class="hidden grid-cols-1 lg:grid-cols-12">
+          
+          <!-- Visual & Specs Column -->
+          <div class="lg:col-span-5 bg-forest-50/60 p-6 sm:p-10 flex flex-col justify-between border-b lg:border-b-0 lg:border-r border-emerald-100">
+            <div>
+              <div class="overflow-hidden rounded-2xl shadow-md mb-6 relative group">
+                <img 
+                  src="assets/images/diy-upcycling.jpg" 
+                  alt="Panduan DIY botol kaca bekas jadi wadah bumbu estetik ala dapur Japandi" 
+                  class="w-full h-64 sm:h-72 object-cover object-right transform group-hover:scale-105 transition-transform duration-500"
+                >
+                <div class="absolute top-3 left-3 bg-forest-900/85 backdrop-blur-md text-white text-xs font-bold px-3 py-1 rounded-full">
+                  ⏱️ 15 Menit Saja
+                </div>
+                <div class="absolute bottom-3 right-3 bg-white/90 backdrop-blur-md text-forest-900 text-xs font-extrabold px-3 py-1 rounded-full shadow">
+                  🌿 Dapur Estetik Minimalis
+                </div>
+              </div>
+
+              <h3 class="font-display font-extrabold text-2xl text-forest-900 mb-2">
+                Aesthetic Spice Jar Upcycling
+              </h3>
+              <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                Ubah toples selai, kopi, atau saus pasta bekas menjadi wadah bumbu rempah dapur ala Japandi / Scandinavian yang cantik dan kedap udara.
+              </p>
+
+              <!-- Bahan-Bahan Diperlukan -->
+              <div class="bg-white p-4 rounded-xl border border-emerald-100 mb-4">
+                <h4 class="font-bold text-xs uppercase tracking-wider text-forest-800 mb-2.5 flex items-center gap-1.5">
+                  <svg class="w-4 h-4 text-forest-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                  Alat & Bahan Siap Pakai:
+                </h4>
+                <ul class="text-xs text-slate-700 space-y-1.5">
+                  <li class="flex items-center gap-2"><span>•</span> Botol/toples kaca bekas selai atau saus</li>
+                  <li class="flex items-center gap-2"><span>•</span> Air hangat, sabun cuci piring & baskom</li>
+                  <li class="flex items-center gap-2"><span>•</span> Minyak kelapa / minyak kayu putih (pelepas lem)</li>
+                  <li class="flex items-center gap-2"><span>•</span> Kertas label kraft cokelat & spidol waterproof</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Pro Tip Note -->
+            <div class="p-3.5 bg-mintlight/60 rounded-xl border border-forest-200 text-xs text-forest-900">
+              💡 <strong>Pro Tip:</strong> Tutup botol logam bisa disemprot cat warna olive matte, hitam doff, atau dibalut tali rami (jute twine) untuk menambah kesan alami rustic!
+            </div>
+          </div>
+
+          <!-- Step-by-Step Interactive Guide Column -->
+          <div class="lg:col-span-7 p-6 sm:p-10 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between pb-6 border-b border-slate-100 mb-8">
+                <div>
+                  <span class="text-xs font-bold text-forest-700 uppercase tracking-widest">Tutorial Lengkap</span>
+                  <h4 class="text-xl font-bold text-slate-900">4 Langkah Bikin Dapur Makin Estetik</h4>
+                </div>
+                <span class="px-3 py-1 rounded-full text-xs font-semibold bg-forest-100 text-forest-800">
+                  Tingkat: Mudah
+                </span>
+              </div>
+
+              <!-- Steps List -->
+              <div class="space-y-6">
+                
+                <!-- Step 1 -->
+                <div class="flex items-start gap-4 group">
+                  <div class="w-9 h-9 rounded-xl bg-forest-100 text-forest-800 font-bold flex items-center justify-center shrink-0 group-hover:bg-forest-700 group-hover:text-white transition-colors">
+                    1
+                  </div>
+                  <div>
+                    <h5 class="font-bold text-base text-slate-900 mb-1">Rendam dalam Air Hangat Bersabun</h5>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                      Rendam toples kaca bekas dalam baskom berisi air hangat dan beberapa tetes sabun selama 15-20 menit. Sebagian besar label kertas kemasan pabrik akan terlepas dengan sendirinya.
+                    </p>
+                  </div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="flex items-start gap-4 group">
+                  <div class="w-9 h-9 rounded-xl bg-forest-100 text-forest-800 font-bold flex items-center justify-center shrink-0 group-hover:bg-forest-700 group-hover:text-white transition-colors">
+                    2
+                  </div>
+                  <div>
+                    <h5 class="font-bold text-base text-slate-900 mb-1">Hilangkan Sisa Lem Membandel</h5>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                      Jika masih ada sisa lem perekat yang lengket, oleskan sedikit minyak kelapa atau minyak kayu putih, diamkan 2 menit, lalu gosok dengan spons kasar atau kain perca hingga kaca bening berkilau.
+                    </p>
+                  </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="flex items-start gap-4 group">
+                  <div class="w-9 h-9 rounded-xl bg-forest-100 text-forest-800 font-bold flex items-center justify-center shrink-0 group-hover:bg-forest-700 group-hover:text-white transition-colors">
+                    3
+                  </div>
+                  <div>
+                    <h5 class="font-bold text-base text-slate-900 mb-1">Sterilisasi dengan Air Panas</h5>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                      Siram bagian dalam toples dengan air mendidih untuk memastikan kebersihan dari sisa aroma makanan lama. Keringkan sepenuhnya dengan lap bersih atau dijemur di bawah sinar matahari.
+                    </p>
+                  </div>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="flex items-start gap-4 group">
+                  <div class="w-9 h-9 rounded-xl bg-forest-100 text-forest-800 font-bold flex items-center justify-center shrink-0 group-hover:bg-forest-700 group-hover:text-white transition-colors">
+                    4
+                  </div>
+                  <div>
+                    <h5 class="font-bold text-base text-slate-900 mb-1">Beri Label & Tata di Rak Bumbu</h5>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                      Tulis nama bumbu (Kunyit, Lada Hitam, Ketumbar, Garam Himalaya) pada stiker label kraft atau gunakan spidol putih tahan air. Tata toples secara serasi di rak bumbu dapur Anda.
+                    </p>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <!-- Action buttons -->
+            <div class="pt-8 mt-8 border-t border-slate-100 flex flex-wrap items-center justify-between gap-4">
+              <div class="flex items-center gap-2 text-xs text-slate-500">
+                <span class="text-forest-600 font-bold">✓ 100% Food Safe</span>
+                <span>•</span>
+                <span>Tampilan Dapur Mewah Tanpa Beli Baru</span>
+              </div>
+              <button onclick="openDiyModal('jar')" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl font-bold text-xs sm:text-sm text-forest-800 bg-forest-50 hover:bg-forest-100 border border-forest-200 transition-colors">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"/></svg>
+                <span>Cetak / Simpan Ringkasan Panduan</span>
+              </button>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ==================== 5. KATALOG STARTER KIT PRODUK RAMAH LINGKUNGAN ==================== -->
+  <section id="produk" class="py-24 bg-white relative border-t border-emerald-100/60">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-14 gap-6">
+        <div class="max-w-2xl space-y-3">
+          <span class="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-forest-100 text-forest-800">
+            Starter Kit Pilihan
+          </span>
+          <h2 class="font-display font-extrabold text-3xl sm:text-4xl lg:text-5xl text-forest-900 tracking-tight">
+            Katalog Produk Ramah Lingkungan
+          </h2>
+          <p class="text-slate-600 text-base sm:text-lg">
+            Investasi perlengkapan harian berkualitas tinggi, 100% alami, dan tahan pakai untuk menggantikan ratusan limbah plastik sekali pakai.
+          </p>
+        </div>
+
+        <!-- Filter Chips -->
+        <div class="flex flex-wrap items-center gap-2">
+          <button onclick="filterProducts('all')" class="prod-filter-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-bold bg-forest-800 text-white shadow-sm transition-all" data-category="all">Semua</button>
+          <button onclick="filterProducts('bathroom')" class="prod-filter-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold bg-slate-100 text-slate-700 hover:bg-forest-50 hover:text-forest-800 transition-all" data-category="bathroom">Kamar Mandi</button>
+          <button onclick="filterProducts('kitchen')" class="prod-filter-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold bg-slate-100 text-slate-700 hover:bg-forest-50 hover:text-forest-800 transition-all" data-category="kitchen">Dapur & Makan</button>
+          <button onclick="filterProducts('travel')" class="prod-filter-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold bg-slate-100 text-slate-700 hover:bg-forest-50 hover:text-forest-800 transition-all" data-category="travel">Belanja & Harian</button>
+        </div>
+      </div>
+
+      <!-- Product Cards Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        
+        <!-- ================= PRODUCT 1: SIKAT GIGI BAMBU ================= -->
+        <div class="product-card group bg-warmcream/50 rounded-3xl border border-emerald-100 overflow-hidden shadow-card hover:shadow-2xl transition-all duration-300 flex flex-col justify-between" data-category="bathroom">
+          <div>
+            <!-- Image Frame -->
+            <div class="relative overflow-hidden aspect-square bg-forest-50">
+              <img 
+                src="assets/images/bamboo-toothbrush.jpg" 
+                alt="Sikat Gigi Bambu Moso Alami EcoLestari" 
+                class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
+                loading="lazy"
+              >
+              <div class="absolute top-3 left-3 bg-forest-800 text-white text-[11px] font-bold px-2.5 py-1 rounded-full shadow">
+                Best Seller
+              </div>
+              <div class="absolute top-3 right-3 bg-white/90 backdrop-blur-md text-earth font-extrabold text-xs px-2.5 py-1 rounded-full shadow">
+                -26%
+              </div>
+            </div>
+
+            <!-- Content Details -->
+            <div class="p-6">
+              <div class="flex items-center justify-between text-xs text-slate-500 mb-1">
+                <span>Perawatan Diri</span>
+                <span class="flex items-center text-amber-500 font-bold">★ 4.9 (420+)</span>
+              </div>
+              <h3 class="font-display font-bold text-lg text-slate-900 group-hover:text-forest-700 transition-colors mb-1.5">
+                Sikat Gigi Bambu Alami
+              </h3>
+              <p class="text-xs text-slate-600 line-clamp-2 leading-relaxed mb-4">
+                Gagang bambu moso organik antibakteri dengan bulu nilon lembut BPA-free. Gagang dapat dikomposkan alami di tanah setelah habis pakai.
+              </p>
+
+              <!-- Price -->
+              <div class="flex items-baseline gap-2 mb-1">
+                <span class="font-display font-black text-2xl text-forest-900">Rp 18.500</span>
+                <span class="text-xs text-slate-400 line-through">Rp 25.000</span>
+              </div>
+              <span class="inline-block text-[10px] font-semibold text-forest-700 bg-forest-100/70 px-2 py-0.5 rounded-md">
+                🌱 Cegah 4 Sikat Plastik/Tahun
+              </span>
+            </div>
+          </div>
+
+          <!-- Card Actions -->
+          <div class="px-6 pb-6 pt-2 flex items-center gap-2">
+            <button 
+              onclick="addToCart('p1', 'Sikat Gigi Bambu Alami', 18500, 'assets/images/bamboo-toothbrush.jpg')"
+              class="flex-1 py-2.5 px-3 rounded-xl font-bold text-xs bg-forest-800 hover:bg-forest-900 text-white shadow-md active:scale-95 transition-all flex items-center justify-center gap-1.5"
+            >
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>
+              <span>+ Keranjang</span>
+            </button>
+            <button 
+              onclick="openProductQuickView('p1')" 
+              class="p-2.5 rounded-xl border border-emerald-200 text-forest-800 hover:bg-forest-50 transition-colors"
+              title="Lihat Detail Produk"
+            >
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- ================= PRODUCT 2: SPONGE LOOFAH ================= -->
+        <div class="product-card group bg-warmcream/50 rounded-3xl border border-emerald-100 overflow-hidden shadow-card hover:shadow-2xl transition-all duration-300 flex flex-col justify-between" data-category="kitchen">
+          <div>
+            <!-- Image Frame -->
+            <div class="relative overflow-hidden aspect-square bg-forest-50">
+              <img 
+                src="assets/images/loofah-sponge.jpg" 
+                alt="Sponge Serat Loofah Alami EcoLestari" 
+                class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
+                loading="lazy"
+              >
+              <div class="absolute top-3 left-3 bg-forest-700 text-white text-[11px] font-bold px-2.5 py-1 rounded-full shadow">
+                100% Organik
+              </div>
+              <div class="absolute top-3 right-3 bg-white/90 backdrop-blur-md text-earth font-extrabold text-xs px-2.5 py-1 rounded-full shadow">
+                -32%
+              </div>
+            </div>
+
+            <!-- Content Details -->
+            <div class="p-6">
+              <div class="flex items-center justify-between text-xs text-slate-500 mb-1">
+                <span>Dapur & Cuci Piring</span>
+                <span class="flex items-center text-amber-500 font-bold">★ 4.8 (310+)</span>
+              </div>
+              <h3 class="font-display font-bold text-lg text-slate-900 group-hover:text-forest-700 transition-colors mb-1.5">
+                Sponge Serat Loofah Alami
+              </h3>
+              <p class="text-xs text-slate-600 line-clamp-2 leading-relaxed mb-4">
+                Terbuat dari tanaman oyong/gambas kering alami. Busa melimpah, tidak menggores wajan teflon, dan 100% bebas rontokan mikroplastik.
+              </p>
+
+              <!-- Price -->
+              <div class="flex items-baseline gap-2 mb-1">
+                <span class="font-display font-black text-2xl text-forest-900">Rp 15.000</span>
+                <span class="text-xs text-slate-400 line-through">Rp 22.000</span>
+              </div>
+              <span class="inline-block text-[10px] font-semibold text-forest-700 bg-forest-100/70 px-2 py-0.5 rounded-md">
+                🧽 Bebas Mikroplastik Kuning-Hijau
+              </span>
+            </div>
+          </div>
+
+          <!-- Card Actions -->
+          <div class="px-6 pb-6 pt-2 flex items-center gap-2">
+            <button 
+              onclick="addToCart('p2', 'Sponge Serat Loofah Alami', 15000, 'assets/images/loofah-sponge.jpg')"
+              class="flex-1 py-2.5 px-3 rounded-xl font-bold text-xs bg-forest-800 hover:bg-forest-900 text-white shadow-md active:scale-95 transition-all flex items-center justify-center gap-1.5"
+            >
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>
+              <span>+ Keranjang</span>
+            </button>
+            <button 
+              onclick="openProductQuickView('p2')" 
+              class="p-2.5 rounded-xl border border-emerald-200 text-forest-800 hover:bg-forest-50 transition-colors"
+              title="Lihat Detail Produk"
+            >
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- ================= PRODUCT 3: SEDOTAN STAINLESS STEEL ================= -->
+        <div class="product-card group bg-warmcream/50 rounded-3xl border border-emerald-100 overflow-hidden shadow-card hover:shadow-2xl transition-all duration-300 flex flex-col justify-between" data-category="kitchen">
+          <div>
+            <!-- Image Frame -->
+            <div class="relative overflow-hidden aspect-square bg-forest-50">
+              <img 
+                src="assets/images/stainless-straws.jpg" 
+                alt="Sedotan Stainless Steel Set EcoLestari" 
+                class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
+                loading="lazy"
+              >
+              <div class="absolute top-3 left-3 bg-forest-800 text-white text-[11px] font-bold px-2.5 py-1 rounded-full shadow">
+                Food Grade 304
+              </div>
+              <div class="absolute top-3 right-3 bg-white/90 backdrop-blur-md text-earth font-extrabold text-xs px-2.5 py-1 rounded-full shadow">
+                -35%
+              </div>
+            </div>
+
+            <!-- Content Details -->
+            <div class="p-6">
+              <div class="flex items-center justify-between text-xs text-slate-500 mb-1">
+                <span>Perlengkapan Minum</span>
+                <span class="flex items-center text-amber-500 font-bold">★ 4.9 (580+)</span>
+              </div>
+              <h3 class="font-display font-bold text-lg text-slate-900 group-hover:text-forest-700 transition-colors mb-1.5">
+                Sedotan Stainless Steel 3in1
+              </h3>
+              <p class="text-xs text-slate-600 line-clamp-2 leading-relaxed mb-4">
+                Paket lengkap sedotan lurus, bengkok, dan sedotan boba 12mm. Dilengkapi sikat kawat pembersih dan kantong kain blacu alami yang higienis.
+              </p>
+
+              <!-- Price -->
+              <div class="flex items-baseline gap-2 mb-1">
+                <span class="font-display font-black text-2xl text-forest-900">Rp 29.000</span>
+                <span class="text-xs text-slate-400 line-through">Rp 45.000</span>
+              </div>
+              <span class="inline-block text-[10px] font-semibold text-forest-700 bg-forest-100/70 px-2 py-0.5 rounded-md">
+                🥤 Bonus Sikat + Pouch Blacu
+              </span>
+            </div>
+          </div>
+
+          <!-- Card Actions -->
+          <div class="px-6 pb-6 pt-2 flex items-center gap-2">
+            <button 
+              onclick="addToCart('p3', 'Sedotan Stainless Steel 3in1', 29000, 'assets/images/stainless-straws.jpg')"
+              class="flex-1 py-2.5 px-3 rounded-xl font-bold text-xs bg-forest-800 hover:bg-forest-900 text-white shadow-md active:scale-95 transition-all flex items-center justify-center gap-1.5"
+            >
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>
+              <span>+ Keranjang</span>
+            </button>
+            <button 
+              onclick="openProductQuickView('p3')" 
+              class="p-2.5 rounded-xl border border-emerald-200 text-forest-800 hover:bg-forest-50 transition-colors"
+              title="Lihat Detail Produk"
+            >
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- ================= PRODUCT 4: REUSABLE CANVAS BAG ================= -->
+        <div class="product-card group bg-warmcream/50 rounded-3xl border border-emerald-100 overflow-hidden shadow-card hover:shadow-2xl transition-all duration-300 flex flex-col justify-between" data-category="travel">
+          <div>
+            <!-- Image Frame -->
+            <div class="relative overflow-hidden aspect-square bg-forest-50">
+              <img 
+                src="assets/images/canvas-bag.jpg" 
+                alt="Reusable Canvas Bag EcoLestari" 
+                class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
+                loading="lazy"
+              >
+              <div class="absolute top-3 left-3 bg-forest-800 text-white text-[11px] font-bold px-2.5 py-1 rounded-full shadow">
+                Kuat Beban 15kg
+              </div>
+              <div class="absolute top-3 right-3 bg-white/90 backdrop-blur-md text-earth font-extrabold text-xs px-2.5 py-1 rounded-full shadow">
+                -30%
+              </div>
+            </div>
+
+            <!-- Content Details -->
+            <div class="p-6">
+              <div class="flex items-center justify-between text-xs text-slate-500 mb-1">
+                <span>Belanja Harian</span>
+                <span class="flex items-center text-amber-500 font-bold">★ 5.0 (890+)</span>
+              </div>
+              <h3 class="font-display font-bold text-lg text-slate-900 group-hover:text-forest-700 transition-colors mb-1.5">
+                Reusable Canvas Bag Eco
+              </h3>
+              <p class="text-xs text-slate-600 line-clamp-2 leading-relaxed mb-4">
+                Bahan katun twill tebal 12oz dengan jahitan X bertulang ganda. Muat belanjaan mingguan hingga 20 liter, lengkap dengan saku resleting dalam.
+              </p>
+
+              <!-- Price -->
+              <div class="flex items-baseline gap-2 mb-1">
+                <span class="font-display font-black text-2xl text-forest-900">Rp 45.000</span>
+                <span class="text-xs text-slate-400 line-through">Rp 65.000</span>
+              </div>
+              <span class="inline-block text-[10px] font-semibold text-forest-700 bg-forest-100/70 px-2 py-0.5 rounded-md">
+                🛍️ Tahan Bertahun-tahun
+              </span>
+            </div>
+          </div>
+
+          <!-- Card Actions -->
+          <div class="px-6 pb-6 pt-2 flex items-center gap-2">
+            <button 
+              onclick="addToCart('p4', 'Reusable Canvas Bag Eco', 45000, 'assets/images/canvas-bag.jpg')"
+              class="flex-1 py-2.5 px-3 rounded-xl font-bold text-xs bg-forest-800 hover:bg-forest-900 text-white shadow-md active:scale-95 transition-all flex items-center justify-center gap-1.5"
+            >
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>
+              <span>+ Keranjang</span>
+            </button>
+            <button 
+              onclick="openProductQuickView('p4')" 
+              class="p-2.5 rounded-xl border border-emerald-200 text-forest-800 hover:bg-forest-50 transition-colors"
+              title="Lihat Detail Produk"
+            >
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg>
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Bulk / Starter Kit Bundle Banner -->
+      <div class="mt-14 p-8 sm:p-10 rounded-3xl bg-gradient-to-r from-forest-100/90 via-emerald-50 to-warmcream border border-forest-200 flex flex-col md:flex-row items-center justify-between gap-6 shadow-sm">
+        <div class="space-y-2 text-center md:text-left">
+          <span class="inline-block px-3 py-1 bg-forest-700 text-white text-xs font-bold rounded-full">Paket Hemat Komplit</span>
+          <h3 class="font-display font-extrabold text-2xl sm:text-3xl text-forest-900">
+            Dapatkan Semua 4 Starter Kit Hanya Rp 99.000!
+          </h3>
+          <p class="text-slate-600 text-xs sm:text-sm max-w-xl">
+            Lengkap dengan 1 Sikat Gigi Bambu, 1 Loofah Sponge, 1 Set Sedotan Stainless, dan 1 Reusable Canvas Bag. Hemat Rp 57.500 dan dapatkan gratis ongkir se-Jabodetabek & Jawa!
+          </p>
+        </div>
+        <button 
+          onclick="addBundleToCart()" 
+          class="shrink-0 px-8 py-3.5 rounded-2xl font-bold text-sm sm:text-base text-white bg-forest-800 hover:bg-forest-900 shadow-xl shadow-forest-800/20 active:scale-95 transition-all flex items-center gap-2"
+        >
+          <svg class="w-5 h-5 text-forest-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+          <span>Pesan Paket Bundle (Rp 99.000)</span>
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ==================== 6. SEKSI INTERAKTIF AI CHATBOT (ZERO WASTE CONSULTANT) ==================== -->
+  <section id="konsultasi-ai" class="py-24 bg-gradient-to-b from-warmcream via-forest-50/40 to-warmcream relative">
+    
+    <!-- Background subtle circular glow -->
+    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[600px] bg-forest-200/25 rounded-full blur-3xl -z-10 pointer-events-none"></div>
+
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-2xl mx-auto mb-12 space-y-3">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-forest-100 text-forest-800">
+          <span class="w-2 h-2 rounded-full bg-forest-600 animate-ping"></span>
+          <span>Zero Waste AI Consultant 24/7</span>
+        </div>
+        <h2 class="font-display font-extrabold text-3xl sm:text-4xl lg:text-5xl text-forest-900 tracking-tight">
+          Konsultasi AI EcoBot Ramah Lingkungan
+        </h2>
+        <p class="text-slate-600 text-base sm:text-lg">
+          Bingung cara mulai kompos di kamar kos? Butuh alternatif kemasan plastik? Tanyakan langsung pada asisten pintar kami kapan saja.
+        </p>
+      </div>
+
+      <!-- MAIN AI CHAT CONTAINER (Ready for n8n Webhook / Widget Integration) -->
+      <!-- Explicit Container IDs provided for n8n webhook connector: #ai-chat-interface, #n8n-chat-container -->
+      <div id="ai-chat-interface" class="bg-white rounded-3xl border border-emerald-100 shadow-2xl overflow-hidden flex flex-col">
+        
+        <!-- Chat Header -->
+        <div class="bg-forest-900 text-white px-6 py-4.5 flex items-center justify-between border-b border-forest-800">
+          <div class="flex items-center gap-3.5">
+            <div class="relative">
+              <div class="w-11 h-11 rounded-2xl bg-gradient-to-tr from-forest-600 to-forest-400 flex items-center justify-center text-white text-xl shadow-inner font-black">
+                🤖
+              </div>
+              <span class="absolute -bottom-0.5 -right-0.5 w-3.5 h-3.5 rounded-full bg-emerald-400 ring-2 ring-forest-900"></span>
+            </div>
+            <div>
+              <div class="flex items-center gap-2">
+                <h3 class="font-display font-bold text-base sm:text-lg text-white">EcoBot Assistant</h3>
+                <span class="px-2 py-0.5 rounded-full text-[10px] font-semibold bg-forest-700 text-forest-200">v2.4 AI</span>
+              </div>
+              <p id="chat-status-text" class="text-xs text-forest-300">Siap menjawab pertanyaan gaya hidup minim sampah</p>
+            </div>
+          </div>
+
+          <!-- Chat Top Actions (n8n Webhook Config & Reset) -->
+          <div class="flex items-center gap-2">
+            <!-- n8n Webhook Connector Button -->
+            <button 
+              onclick="openN8nConfigModal()" 
+              id="n8n-settings-btn"
+              class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-semibold bg-forest-800 hover:bg-forest-700 text-forest-200 border border-forest-700 transition-colors"
+              title="Konfigurasi Webhook n8n"
+            >
+              <svg class="w-4 h-4 text-forest-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+              <span class="hidden sm:inline">Koneksi n8n</span>
+            </button>
+
+            <!-- Reset Chat Button -->
+            <button 
+              onclick="resetChatHistory()" 
+              class="p-2 rounded-xl text-forest-300 hover:text-white hover:bg-forest-800 transition-colors"
+              title="Bersihkan Percakapan"
+            >
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- Chat Notification Bar for Webhook Status -->
+        <div id="n8n-status-bar" class="px-6 py-2 bg-forest-50 border-b border-emerald-100 flex items-center justify-between text-xs text-forest-800">
+          <div class="flex items-center gap-2">
+            <span id="webhook-indicator-dot" class="w-2 h-2 rounded-full bg-forest-500"></span>
+            <span id="webhook-status-label">Mode Asisten Cerdas Mandiri (Siap dihubungkan ke Webhook n8n)</span>
+          </div>
+          <span class="text-[11px] text-slate-500">ID Sesi: <code id="session-display-id" class="font-mono text-forest-700">eco_session_live</code></span>
+        </div>
+
+        <!-- Dedicated Message List Container (n8n container hook: #n8n-chat-container) -->
+        <div id="n8n-chat-container" class="relative">
+          <div id="chat-messages-container" class="p-6 h-[400px] overflow-y-auto space-y-4 bg-slate-50/50">
+            
+            <!-- Bot Initial Greeting Message -->
+            <div class="flex items-start gap-3 max-w-[85%]">
+              <div class="w-8 h-8 rounded-xl bg-forest-700 text-white flex items-center justify-center shrink-0 text-sm shadow">
+                🌱
+              </div>
+              <div class="bg-white p-4 rounded-2xl rounded-tl-sm border border-emerald-100/90 shadow-sm text-slate-800 text-sm leading-relaxed space-y-2">
+                <p>
+                  Halo! Saya <strong>EcoBot</strong>, asisten AI konsultan gaya hidup minim sampah dari EcoLestari 🌍.
+                </p>
+                <p>
+                  Anda dapat bertanya tentang cara memulai komposting rumahan, alternatif produk plastik, cara daur ulang sampah tertentu, atau tips praktis lainnya. Apa yang ingin Anda tanyakan hari ini?
+                </p>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Typing indicator (hidden by default) -->
+          <div id="typing-indicator" class="hidden absolute bottom-4 left-6 flex items-center gap-2 px-4 py-2.5 bg-white/95 backdrop-blur-md rounded-2xl border border-emerald-100 shadow-md text-xs text-forest-800">
+            <span>EcoBot sedang meracik jawaban</span>
+            <span class="flex items-center gap-1">
+              <span class="w-1.5 h-1.5 rounded-full bg-forest-600 typing-dot"></span>
+              <span class="w-1.5 h-1.5 rounded-full bg-forest-600 typing-dot"></span>
+              <span class="w-1.5 h-1.5 rounded-full bg-forest-600 typing-dot"></span>
+            </span>
+          </div>
+        </div>
+
+        <!-- Quick Suggestion Prompt Chips -->
+        <div class="px-6 py-3 bg-white border-t border-slate-100 overflow-x-auto">
+          <div class="flex items-center gap-2 text-xs whitespace-nowrap">
+            <span class="text-slate-400 font-semibold shrink-0">Saran Cepat:</span>
+            <button onclick="sendQuickPrompt('Bagaimana cara mulai komposting di rumah tanpa bau?')" class="px-3 py-1.5 rounded-xl bg-forest-50 hover:bg-forest-100 text-forest-800 border border-forest-200 transition-colors">
+              🌱 Kompos Rumahan Bebas Bau
+            </button>
+            <button onclick="sendQuickPrompt('Apa alternatif praktis pengganti kantong kresek dan sedotan?')" class="px-3 py-1.5 rounded-xl bg-forest-50 hover:bg-forest-100 text-forest-800 border border-forest-200 transition-colors">
+              🥤 Pengganti Plastik Sekali Pakai
+            </button>
+            <button onclick="sendQuickPrompt('Bagaimana cara membuat ecobrick yang benar dan padat?')" class="px-3 py-1.5 rounded-xl bg-forest-50 hover:bg-forest-100 text-forest-800 border border-forest-200 transition-colors">
+              🧱 Panduan Ecobrick
+            </button>
+            <button onclick="sendQuickPrompt('Ke mana harus menyetor minyak jelantah bekas gorengan?')" class="px-3 py-1.5 rounded-xl bg-forest-50 hover:bg-forest-100 text-forest-800 border border-forest-200 transition-colors">
+              🍳 Pengelolaan Minyak Jelantah
+            </button>
+          </div>
+        </div>
+
+        <!-- Chat Input Form -->
+        <form id="chat-input-form" onsubmit="handleChatSubmit(event)" class="p-4 sm:p-5 bg-white border-t border-slate-100 flex items-center gap-3">
+          <div class="relative flex-1">
+            <input 
+              type="text" 
+              id="chat-input-text" 
+              placeholder="Tulis pertanyaan seputar zero waste di sini... (contoh: cara pilah sampah skincare)" 
+              class="w-full pl-4 pr-10 py-3.5 rounded-2xl bg-slate-50 border border-slate-200 focus:border-forest-600 focus:bg-white focus:outline-none focus:ring-2 focus:ring-forest-200 text-sm text-slate-800 placeholder-slate-400 transition-all"
+              required
+              autocomplete="off"
+            >
+          </div>
+          <button 
+            type="submit" 
+            id="chat-send-btn" 
+            class="px-5 sm:px-6 py-3.5 rounded-2xl bg-forest-800 hover:bg-forest-900 active:scale-95 text-white font-bold text-sm shadow-md transition-all flex items-center gap-2 shrink-0"
+          >
+            <span class="hidden sm:inline">Kirim</span>
+            <svg class="w-4 h-4 transform rotate-45" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/></svg>
+          </button>
+        </form>
+
+      </div>
+
+      <!-- Developer / n8n Integration Guidance Card -->
+      <div class="mt-6 p-4 rounded-2xl bg-forest-50/80 border border-emerald-200/80 text-xs text-slate-600 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
+        <div class="flex items-center gap-2 text-forest-800">
+          <svg class="w-4 h-4 shrink-0 text-forest-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          <span><strong>Untuk Developer:</strong> Container ID <code>#n8n-chat-container</code> dan endpoint webhook n8n sudah disiapkan. Anda dapat menghubungkannya langsung ke workflow AI Agent n8n.</span>
+        </div>
+        <button onclick="openN8nConfigModal()" class="shrink-0 font-bold text-forest-800 hover:text-forest-950 underline">
+          Buka Dokumentasi & Konfigurasi →
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ==================== TESTIMONIALS & KOMUNITAS ==================== -->
+  <section class="py-20 bg-white border-t border-emerald-100/60">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-2xl mx-auto mb-14 space-y-2">
+        <span class="text-xs font-bold text-forest-700 uppercase tracking-widest">Kisah Pejuang Bumi</span>
+        <h2 class="font-display font-extrabold text-3xl sm:text-4xl text-forest-900">
+          Kata Mereka yang Telah Memulai
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <!-- Testimonial 1 -->
+        <div class="p-8 rounded-3xl bg-warmcream/60 border border-emerald-100 flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="text-amber-400 flex text-sm">★★★★★</div>
+            <p class="text-slate-700 text-sm italic leading-relaxed">
+              "Awalnya ragu apakah bisa komposting di dapur apartemen tanpa bau. Konsultasi AI EcoBot ngasih tips ember tumpuk dan biang kompos yang pas. Sekarang sampah dapur berkurang drastis!"
+            </p>
+          </div>
+          <div class="flex items-center gap-3 pt-6 mt-6 border-t border-slate-100">
+            <div class="w-10 h-10 rounded-full bg-forest-200 text-forest-800 font-bold flex items-center justify-center text-sm">DR</div>
+            <div>
+              <h4 class="font-bold text-sm text-slate-900">Dini Rahayu</h4>
+              <p class="text-xs text-slate-500">Ibu Rumah Tangga, Bandung</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 2 -->
+        <div class="p-8 rounded-3xl bg-warmcream/60 border border-emerald-100 flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="text-amber-400 flex text-sm">★★★★★</div>
+            <p class="text-slate-700 text-sm italic leading-relaxed">
+              "Tutorial ubah kaos bekas jadi tas belanja tanpa jahit itu jenius banget! Kaos konser lama saya yang udah kekecilan sekarang jadi tas belanja favorit buat ke pasar."
+            </p>
+          </div>
+          <div class="flex items-center gap-3 pt-6 mt-6 border-t border-slate-100">
+            <div class="w-10 h-10 rounded-full bg-teal-200 text-teal-800 font-bold flex items-center justify-center text-sm">RP</div>
+            <div>
+              <h4 class="font-bold text-sm text-slate-900">Reza Pratama</h4>
+              <p class="text-xs text-slate-500">Mahasiswa, Yogyakarta</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 3 -->
+        <div class="p-8 rounded-3xl bg-warmcream/60 border border-emerald-100 flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="text-amber-400 flex text-sm">★★★★★</div>
+            <p class="text-slate-700 text-sm italic leading-relaxed">
+              "Starter kit sikat gigi bambu dan loofahnya berkualitas banget. Loofahnya tahan sampai 2 bulan lebih dan gak licin pas nyuci wajan. Sangat merekomendasikan EcoLestari!"
+            </p>
+          </div>
+          <div class="flex items-center gap-3 pt-6 mt-6 border-t border-slate-100">
+            <div class="w-10 h-10 rounded-full bg-amber-200 text-amber-800 font-bold flex items-center justify-center text-sm">SK</div>
+            <div>
+              <h4 class="font-bold text-sm text-slate-900">Sarah Kusuma</h4>
+              <p class="text-xs text-slate-500">Karyawan Swasta, Jakarta</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ==================== 7. FOOTER ==================== -->
+  <footer class="bg-forest-900 text-slate-300 pt-20 pb-12 border-t border-forest-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Top Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 pb-16 border-b border-forest-800/80">
+        
+        <!-- Brand & Mission (Col 1-5) -->
+        <div class="lg:col-span-5 space-y-5">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-xl bg-forest-600 flex items-center justify-center text-white shadow">
+              <svg class="w-5 h-5 -rotate-12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/>
+                <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/>
+              </svg>
+            </div>
+            <span class="font-display font-extrabold text-2xl text-white tracking-tight">EcoLestari</span>
+          </div>
+
+          <p class="text-sm text-slate-400 leading-relaxed max-w-md">
+            Gerakan independen dan platform kolaboratif untuk mempercepat adopsi gaya hidup minim sampah (Zero Waste Lifestyle) di Indonesia. Dari rumah, untuk bumi yang lestari.
+          </p>
+
+          <!-- Social Media Icons (Including @EcoLestari.ID) -->
+          <div class="flex items-center gap-3 pt-2">
+            <!-- Instagram -->
+            <a href="https://instagram.com/EcoLestari.ID" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-xl bg-forest-800 hover:bg-forest-700 text-white flex items-center justify-center transition-colors group" title="Instagram @EcoLestari.ID">
+              <svg class="w-5 h-5 text-forest-300 group-hover:text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            </a>
+
+            <!-- TikTok -->
+            <a href="https://tiktok.com/@EcoLestari" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-xl bg-forest-800 hover:bg-forest-700 text-white flex items-center justify-center transition-colors group" title="TikTok @EcoLestari">
+              <svg class="w-5 h-5 text-forest-300 group-hover:text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.24 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>
+            </a>
+
+            <!-- WhatsApp Community -->
+            <a href="https://chat.whatsapp.com/ecolestari" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-xl bg-forest-800 hover:bg-forest-700 text-white flex items-center justify-center transition-colors group" title="Komunitas WhatsApp">
+              <svg class="w-5 h-5 text-forest-300 group-hover:text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347m-5.421 7.461"/></svg>
+            </a>
+
+            <!-- YouTube -->
+            <a href="https://youtube.com/@EcoLestari" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-xl bg-forest-800 hover:bg-forest-700 text-white flex items-center justify-center transition-colors group" title="YouTube Channel">
+              <svg class="w-5 h-5 text-forest-300 group-hover:text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Links: Navigasi Cepat (Col 6-7) -->
+        <div class="lg:col-span-2 space-y-4">
+          <h4 class="font-bold text-sm text-white uppercase tracking-wider">Jelajahi</h4>
+          <ul class="space-y-2.5 text-sm">
+            <li><a href="#hero" class="hover:text-forest-300 transition-colors">Beranda</a></li>
+            <li><a href="#edukasi" class="hover:text-forest-300 transition-colors">Edukasi & Data</a></li>
+            <li><a href="#upcycling" class="hover:text-forest-300 transition-colors">Pemanfaatan Bekas</a></li>
+            <li><a href="#produk" class="hover:text-forest-300 transition-colors">Katalog Produk</a></li>
+            <li><a href="#konsultasi-ai" class="hover:text-forest-300 transition-colors">Konsultasi AI</a></li>
+          </ul>
+        </div>
+
+        <!-- Links: Komunitas & Aksi (Col 8-9) -->
+        <div class="lg:col-span-2 space-y-4">
+          <h4 class="font-bold text-sm text-white uppercase tracking-wider">Komunitas</h4>
+          <ul class="space-y-2.5 text-sm">
+            <li><a href="https://instagram.com/EcoLestari.ID" target="_blank" class="hover:text-forest-300 transition-colors">Instagram @EcoLestari.ID</a></li>
+            <li><a href="#upcycling" class="hover:text-forest-300 transition-colors">Panduan DIY</a></li>
+            <li><a href="#konsultasi-ai" class="hover:text-forest-300 transition-colors">Tanya EcoBot</a></li>
+            <li><a href="#edukasi" class="hover:text-forest-300 transition-colors">Kalkulator Jejak</a></li>
+          </ul>
+        </div>
+
+        <!-- Newsletter Subscription (Col 10-12) -->
+        <div class="lg:col-span-3 space-y-4">
+          <h4 class="font-bold text-sm text-white uppercase tracking-wider">Surat Kabar Lestari</h4>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Dapatkan tips mingguan zero waste, panduan DIY baru, dan voucher diskon produk ramah lingkungan.
+          </p>
+          <form onsubmit="handleNewsletter(event)" class="space-y-2">
+            <div class="relative">
+              <input 
+                type="email" 
+                id="newsletter-email" 
+                placeholder="nama@email.com" 
+                required 
+                class="w-full px-4 py-2.5 rounded-xl bg-forest-800 border border-forest-700 text-sm text-white placeholder-slate-400 focus:outline-none focus:border-forest-500"
+              >
+            </div>
+            <button 
+              type="submit" 
+              class="w-full py-2.5 px-4 rounded-xl font-bold text-xs bg-forest-600 hover:bg-forest-500 text-white transition-colors flex items-center justify-center gap-1.5"
+            >
+              <span>Berlangganan Gratis</span>
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+            </button>
+          </form>
+        </div>
+
+      </div>
+
+      <!-- Bottom Bar: Copyright 2026 & Legal -->
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
+        <div>
+          © 2026 <strong>EcoLestari Indonesia</strong>. Hak Cipta Dilindungi. Bersama Menjaga Nafas Bumi.
+        </div>
+        <div class="flex items-center gap-6">
+          <a href="#" class="hover:text-slate-400 transition-colors">Kebijakan Privasi</a>
+          <a href="#" class="hover:text-slate-400 transition-colors">Syarat & Ketentuan</a>
+          <a href="#" class="hover:text-slate-400 transition-colors">Peta Situs</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+
+  <!-- ==================== SLIDE-OVER CART DRAWER ==================== -->
+  <div id="cart-drawer-overlay" class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 hidden opacity-0 transition-opacity duration-300" onclick="closeCartDrawer()"></div>
+  <aside id="cart-drawer" class="fixed top-0 right-0 bottom-0 w-full max-w-md bg-white z-50 shadow-2xl transform translate-x-full transition-transform duration-300 flex flex-col justify-between">
+    
+    <!-- Drawer Header -->
+    <div class="p-6 border-b border-slate-100 flex items-center justify-between bg-forest-50/50">
+      <div class="flex items-center gap-2">
+        <svg class="w-5 h-5 text-forest-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>
+        <h3 class="font-display font-bold text-lg text-forest-900">Keranjang Belanja</h3>
+        <span id="drawer-cart-count" class="px-2 py-0.5 rounded-full text-xs font-bold bg-forest-200 text-forest-800">0</span>
+      </div>
+      <button onclick="closeCartDrawer()" class="p-2 rounded-xl text-slate-400 hover:text-slate-700 hover:bg-slate-100 transition-colors">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+      </button>
+    </div>
+
+    <!-- Drawer Items List -->
+    <div id="cart-items-list" class="p-6 overflow-y-auto flex-1 space-y-4">
+      <!-- Empty state initially -->
+      <div id="cart-empty-state" class="text-center py-16 space-y-3">
+        <div class="text-5xl">🛍️</div>
+        <h4 class="font-bold text-base text-slate-800">Keranjang Masih Kosong</h4>
+        <p class="text-xs text-slate-500 max-w-xs mx-auto">
+          Mulai jelajahi starter kit ramah lingkungan dan tambahkan ke keranjang untuk mendukung gaya hidup bebas plastik!
+        </p>
+        <button onclick="closeCartDrawer(); window.location.hash = 'produk'" class="mt-2 px-5 py-2 rounded-xl font-bold text-xs bg-forest-800 text-white">
+          Jelajahi Produk
+        </button>
+      </div>
+    </div>
+
+    <!-- Drawer Footer Checkout -->
+    <div class="p-6 border-t border-slate-100 bg-white space-y-4 shadow-lg">
+      <div class="space-y-1.5">
+        <div class="flex justify-between text-xs text-slate-500">
+          <span>Subtotal Produk</span>
+          <span id="cart-subtotal" class="font-bold text-slate-800">Rp 0</span>
+        </div>
+        <div class="flex justify-between text-xs text-forest-700">
+          <span>Dampak Lingkungan</span>
+          <span class="font-bold">100% Bebas Plastik</span>
+        </div>
+        <div class="flex justify-between text-base font-extrabold text-forest-900 pt-2 border-t border-slate-100">
+          <span>Total</span>
+          <span id="cart-total" class="font-display text-xl text-forest-800">Rp 0</span>
+        </div>
+      </div>
+
+      <!-- Checkout via WhatsApp -->
+      <button 
+        id="btn-whatsapp-checkout" 
+        onclick="checkoutViaWhatsApp()" 
+        disabled
+        class="w-full py-3.5 rounded-2xl font-bold text-sm text-white bg-forest-800 hover:bg-forest-900 disabled:opacity-50 disabled:cursor-not-allowed shadow-lg transition-all flex items-center justify-center gap-2"
+      >
+        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
+        <span>Pesan Cepat via WhatsApp</span>
+      </button>
+    </div>
+
+  </aside>
+
+
+  <!-- ==================== MODAL: n8n WEBHOOK CONFIGURATION ==================== -->
+  <div id="n8n-config-modal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-sm overflow-y-auto">
+    <div class="bg-white rounded-3xl max-w-xl w-full p-6 sm:p-8 shadow-2xl border border-emerald-100 space-y-5 my-8 max-h-[90vh] overflow-y-auto">
+      
+      <div class="flex items-center justify-between pb-3 border-b border-slate-100">
+        <div class="flex items-center gap-2.5">
+          <div class="w-10 h-10 rounded-xl bg-forest-100 text-forest-800 font-bold flex items-center justify-center text-lg shadow-sm">
+            ⚡
+          </div>
+          <div>
+            <h3 class="font-display font-bold text-lg text-slate-900">Integrasi Webhook n8n</h3>
+            <p class="text-xs text-slate-500">Hubungkan EcoBot Chatbot ke workflow AI Agent n8n Anda</p>
+          </div>
+        </div>
+        <button onclick="closeN8nConfigModal()" class="p-2 rounded-xl text-slate-400 hover:text-slate-700">✕</button>
+      </div>
+
+      <!-- Panduan Praktis Khusus Workflow Pengguna -->
+      <div class="space-y-4 text-xs text-slate-600">
+        
+        <!-- Workflow Direct Link & Status Warning -->
+        <div class="p-3.5 bg-amber-50 rounded-2xl border border-amber-200 text-amber-900 space-y-1.5">
+          <div class="flex items-center justify-between">
+            <span class="font-bold flex items-center gap-1.5">
+              <span>⚠️</span> Langkah Wajib di n8n:
+            </span>
+            <a href="https://otomasi-n8n.de8x9i.easypanel.host/workflow/LSMFzKxYT0KWrhCc" target="_blank" rel="noopener noreferrer" class="font-bold text-forest-700 underline flex items-center gap-1 hover:text-forest-900">
+              <span>Buka Workflow Anda</span>
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+            </a>
+          </div>
+          <ol class="list-decimal pl-4 space-y-1 text-slate-700">
+            <li>Nyalakan saklar <strong>Publish</strong> di pojok kanan atas canvas n8n (dari abu-abu <code>0/1</code> menjadi hijau <code>1/1</code>). Tanpa Publish, n8n akan menolak akses dengan kode <em>404 Not Registered</em>.</li>
+            <li>Klik node <strong>"When chat message received"</strong>, buka tab <strong>Production URL</strong> (atau <strong>Test URL</strong> jika sedang uji coba), dan salin tautannya.</li>
+            <li>Tempelkan URL Webhook tersebut pada kotak di bawah ini.</li>
+          </ol>
+        </div>
+
+        <div>
+          <label class="block font-bold text-slate-700 mb-1" for="n8n-webhook-url">URL Webhook Chat n8n:</label>
+          <input 
+            type="url" 
+            id="n8n-webhook-url" 
+            value="https://otomasi-n8n.de8x9i.easypanel.host/webhook/ecolestari-chat/chat" 
+            placeholder="https://otomasi-n8n.de8x9i.easypanel.host/webhook/ecolestari-chat/chat" 
+            class="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 focus:outline-none focus:border-forest-600 font-mono text-xs text-slate-800"
+          >
+          <span class="text-[10px] text-emerald-700 font-medium mt-1 block">Tersambung ke workflow: https://otomasi-n8n.de8x9i.easypanel.host/webhook/ecolestari-chat/chat</span>
+        </div>
+
+        <!-- Section: Referensi Workflow Pro -->
+        <div class="p-4 bg-forest-50/80 rounded-2xl border border-forest-200 space-y-2">
+          <div class="flex items-center justify-between">
+            <span class="font-bold text-forest-900 text-xs flex items-center gap-1.5">
+              <span>🚀</span> Referensi Workflow Pro (Dilengkapi 2 Tools & System Prompt)
+            </span>
+            <button onclick="copyProWorkflowJson()" class="px-2.5 py-1 rounded-lg bg-forest-700 hover:bg-forest-800 text-white font-bold text-[11px] transition-colors flex items-center gap-1">
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
+              <span>Salin JSON Pro</span>
+            </button>
+          </div>
+          <p class="text-[11px] text-slate-600 leading-relaxed">
+            Workflow n8n Anda saat ini masih kosong pada bagian <strong>Tool</strong>. Kami telah membuatkan arsitektur workflow pro lengkap dengan:
+            <strong>Tool Katalog Produk EcoLestari</strong>, <strong>Tool Panduan Pilah Sampah Khusus Indonesia</strong>, dan <strong>System Prompt Persona EcoBot</strong>. Cukup klik tombol di atas lalu paste (<code>Ctrl+V</code>) langsung di canvas n8n Anda!
+          </p>
+        </div>
+
+        <div class="p-3 bg-slate-50 rounded-xl border border-slate-200 font-mono text-[11px] text-slate-700 space-y-1">
+          <div class="font-bold text-forest-800">Payload JSON otomatis yang dikirimkan web ke n8n:</div>
+          <pre class="overflow-x-auto text-[10px]">{
+  "action": "sendMessage",
+  "chatInput": "Pertanyaan pengguna",
+  "message": "Pertanyaan pengguna",
+  "sessionId": "eco_session_live"
+}</pre>
+        </div>
+      </div>
+
+      <div class="pt-3 flex flex-wrap items-center justify-between gap-3 border-t border-slate-100">
+        <button onclick="testN8nConnection()" class="px-4 py-2.5 rounded-xl text-xs font-bold bg-slate-100 hover:bg-slate-200 text-slate-700 transition-colors">
+          Uji Ping Webhook
+        </button>
+        <div class="flex items-center gap-2">
+          <button onclick="clearN8nWebhook()" class="px-4 py-2.5 rounded-xl text-xs font-bold text-earth hover:bg-red-50 transition-colors">
+            Reset (Gunakan AI Internal)
+          </button>
+          <button onclick="saveN8nWebhook()" class="px-5 py-2.5 rounded-xl text-xs font-bold bg-forest-800 hover:bg-forest-900 text-white shadow-md transition-colors">
+            Simpan Konfigurasi
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- ==================== MODAL: PRODUCT QUICK VIEW ==================== -->
+  <div id="product-quick-view-modal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-sm">
+    <div class="bg-white rounded-3xl max-w-2xl w-full p-6 sm:p-8 shadow-2xl border border-emerald-100 overflow-hidden relative">
+      <button onclick="closeProductQuickView()" class="absolute top-5 right-5 p-2 rounded-xl text-slate-400 hover:text-slate-700 hover:bg-slate-100 z-10">✕</button>
+      <div id="quick-view-content" class="grid grid-cols-1 sm:grid-cols-2 gap-6 items-center">
+        <!-- Content will be injected dynamically via JS -->
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ==================== MODAL: DIY PRINT GUIDE ==================== -->
+  <div id="diy-modal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-sm">
+    <div class="bg-white rounded-3xl max-w-lg w-full p-6 sm:p-8 shadow-2xl border border-emerald-100 space-y-4">
+      <div class="flex items-center justify-between pb-3 border-b border-slate-100">
+        <h3 id="diy-modal-title" class="font-display font-bold text-lg text-forest-900">Panduan Ringkas DIY</h3>
+        <button onclick="closeDiyModal()" class="p-2 text-slate-400 hover:text-slate-700">✕</button>
+      </div>
+      <div id="diy-modal-body" class="text-xs sm:text-sm text-slate-700 space-y-3 leading-relaxed">
+        <!-- Injected via JS -->
+      </div>
+      <div class="pt-4 flex justify-end gap-2 border-t border-slate-100">
+        <button onclick="window.print()" class="px-4 py-2 rounded-xl bg-forest-800 text-white font-bold text-xs flex items-center gap-1.5">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"/></svg>
+          <span>Cetak Sekarang</span>
+        </button>
+        <button onclick="closeDiyModal()" class="px-4 py-2 rounded-xl bg-slate-100 text-slate-700 font-bold text-xs">
+          Tutup
+        </button>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ==================== TOAST NOTIFICATION CONTAINER ==================== -->
+  <div id="toast-container" class="fixed bottom-28 right-6 z-50 flex flex-col gap-2 pointer-events-none"></div>
+
+  <!-- ==================== FLOATING CHATBOT WIDGET (SAMPING KANAN) ==================== -->
+  <!-- Floating Action Button Launcher -->
+  <div id="floating-chat-launcher" class="fixed bottom-6 right-6 z-50 flex items-center gap-3">
+    <!-- Interactive Tooltip Pill -->
+    <div 
+      id="chat-fab-tooltip" 
+      class="hidden sm:flex items-center gap-2 px-4 py-2.5 rounded-2xl bg-white/95 backdrop-blur-md border border-emerald-200 shadow-xl text-xs font-bold text-forest-900 cursor-pointer animate-pulse-subtle hover:bg-forest-50 transition-all select-none"
+      onclick="toggleFloatingChat()"
+    >
+      <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-ping"></span>
+      <span>Tanya AI Konsultan EcoBot</span>
+      <span class="text-sm">🌱</span>
+    </div>
+
+    <!-- Circular Floating Button -->
+    <button 
+      id="floating-chat-btn" 
+      onclick="toggleFloatingChat()" 
+      aria-label="Buka Chatbot AI Zero Waste"
+      class="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-gradient-to-tr from-forest-800 via-forest-700 to-forest-500 text-white shadow-2xl shadow-forest-900/40 hover:shadow-forest-900/60 hover:scale-105 active:scale-95 transition-all flex items-center justify-center border-2 border-white/80 relative group focus:outline-none"
+    >
+      <span class="absolute -top-1 -right-1 flex h-4 w-4">
+        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+        <span class="relative inline-flex rounded-full h-4 w-4 bg-emerald-500 border-2 border-white"></span>
+      </span>
+      
+      <!-- Chat Icon -->
+      <svg id="fab-chat-icon" class="w-7 h-7 transform group-hover:rotate-6 transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+        <path d="M8 10h.01"></path>
+        <path d="M12 10h.01"></path>
+        <path d="M16 10h.01"></path>
+      </svg>
+      <!-- Close Icon (shown when open) -->
+      <svg id="fab-close-icon" class="w-7 h-7 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M6 18L18 6M6 6l12 12"/>
+      </svg>
+    </button>
+  </div>
+
+  <!-- FLOATING CHAT POPUP WINDOW -->
+  <div 
+    id="floating-chat-window" 
+    class="fixed bottom-24 right-4 sm:right-6 z-50 w-[calc(100vw-2rem)] sm:w-[410px] h-[550px] max-h-[82vh] bg-white rounded-3xl border border-emerald-100 shadow-2xl overflow-hidden flex flex-col justify-between hidden transform scale-95 opacity-0 transition-all duration-300 origin-bottom-right"
+  >
+    <!-- Header -->
+    <div class="bg-gradient-to-r from-forest-900 to-forest-800 text-white px-5 py-3.5 flex items-center justify-between border-b border-forest-700">
+      <div class="flex items-center gap-3">
+        <div class="relative">
+          <div class="w-10 h-10 rounded-2xl bg-gradient-to-tr from-forest-600 to-forest-400 flex items-center justify-center text-white text-lg shadow-inner font-black">
+            🤖
+          </div>
+          <span class="absolute -bottom-0.5 -right-0.5 w-3 h-3 rounded-full bg-emerald-400 ring-2 ring-forest-900"></span>
+        </div>
+        <div>
+          <div class="flex items-center gap-1.5">
+            <h4 class="font-display font-bold text-sm text-white">EcoBot AI Consultant</h4>
+            <span class="px-1.5 py-0.5 rounded-full text-[9px] font-bold bg-forest-700 text-forest-200">Live</span>
+          </div>
+          <p id="floating-n8n-status" class="text-[11px] text-forest-300">Siap menjawab tips zero waste</p>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-1">
+        <button onclick="openN8nConfigModal()" class="p-1.5 rounded-xl text-forest-300 hover:text-white hover:bg-forest-800 transition-colors" title="Pengaturan Webhook n8n">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+        </button>
+        <button onclick="toggleFloatingChat()" class="p-1.5 rounded-xl text-forest-300 hover:text-white hover:bg-forest-800 transition-colors" title="Tutup Chat">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Messages Container -->
+    <div id="floating-chat-messages" class="p-4 overflow-y-auto flex-1 space-y-3 bg-slate-50/70 text-xs sm:text-sm">
+      <div class="flex items-start gap-2.5 max-w-[90%]">
+        <div class="w-7 h-7 rounded-xl bg-forest-700 text-white flex items-center justify-center shrink-0 text-xs shadow">🌱</div>
+        <div class="bg-white p-3.5 rounded-2xl rounded-tl-sm border border-emerald-100 shadow-sm text-slate-800 text-xs leading-relaxed space-y-1.5">
+          <p>Halo! Saya <strong>EcoBot AI</strong> 🌱.</p>
+          <p>Ada yang bisa saya bantu seputar pemilahan sampah, komposting rumahan, alternatif plastik, atau starter kit hari ini?</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Typing Indicator -->
+    <div id="floating-typing-indicator" class="hidden px-4 py-2 bg-white text-[11px] text-forest-800 flex items-center gap-1.5 border-t border-slate-100">
+      <span>EcoBot sedang meracik jawaban</span>
+      <span class="flex items-center gap-0.5">
+        <span class="w-1 h-1 rounded-full bg-forest-600 typing-dot"></span>
+        <span class="w-1 h-1 rounded-full bg-forest-600 typing-dot"></span>
+        <span class="w-1 h-1 rounded-full bg-forest-600 typing-dot"></span>
+      </span>
+    </div>
+
+    <!-- Quick Chips -->
+    <div class="px-3 py-2 bg-white border-t border-slate-100 overflow-x-auto flex items-center gap-1.5 whitespace-nowrap text-[11px]">
+      <button onclick="sendFloatingPrompt('Cara mulai kompos di rumah tanpa bau?')" class="px-2.5 py-1 rounded-lg bg-forest-50 hover:bg-forest-100 text-forest-800 border border-forest-200 transition-colors">
+        🌱 Kompos Rumahan
+      </button>
+      <button onclick="sendFloatingPrompt('Apa alternatif pengganti kantong plastik sekali pakai?')" class="px-2.5 py-1 rounded-lg bg-forest-50 hover:bg-forest-100 text-forest-800 border border-forest-200 transition-colors">
+        🥤 Bebas Plastik
+      </button>
+      <button onclick="sendFloatingPrompt('Ke mana buang minyak jelantah?')" class="px-2.5 py-1 rounded-lg bg-forest-50 hover:bg-forest-100 text-forest-800 border border-forest-200 transition-colors">
+        🍳 Minyak Jelantah
+      </button>
+    </div>
+
+    <!-- Input Form -->
+    <form id="floating-chat-form" onsubmit="handleFloatingChatSubmit(event)" class="p-3 bg-white border-t border-slate-100 flex items-center gap-2">
+      <input 
+        type="text" 
+        id="floating-chat-input" 
+        placeholder="Tanya seputar zero waste..." 
+        class="flex-1 px-3.5 py-2.5 rounded-xl bg-slate-50 border border-slate-200 text-xs focus:outline-none focus:border-forest-600 focus:bg-white"
+        required
+        autocomplete="off"
+      >
+      <button type="submit" class="p-2.5 rounded-xl bg-forest-800 text-white font-bold hover:bg-forest-900 transition-colors">
+        <svg class="w-4 h-4 transform rotate-45" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/></svg>
+      </button>
+    </form>
+  </div>
+
+
+  <!-- ==================== INTERACTIVE JAVASCRIPT LOGIC ==================== -->
+  <script>
+    // ==========================================
+    // 1. DATA STATE & CONFIGURATION
+    // ==========================================
+    const productsData = {
+      p1: {
+        id: 'p1',
+        name: 'Sikat Gigi Bambu Alami',
+        category: 'bathroom',
+        price: 18500,
+        originalPrice: 25000,
+        image: 'assets/images/bamboo-toothbrush.jpg',
+        badge: 'Best Seller',
+        rating: '4.9 (420+)',
+        desc: 'Gagang bambu moso organik antibakteri dengan bulu nilon halus BPA-free. Gagang dapat dikomposkan alami di tanah pekarangan rumah setelah dicabut bulunya.',
+        specs: ['Material: Bambu Moso Alami 100%', 'Bulu Sikat: Soft Bristles BPA-Free', 'Daya Tahan: 3 Bulan', 'Kemasan: Kardus Daur Ulang Tanpa Plastik']
+      },
+      p2: {
+        id: 'p2',
+        name: 'Sponge Serat Loofah Alami',
+        category: 'kitchen',
+        price: 15000,
+        originalPrice: 22000,
+        image: 'assets/images/loofah-sponge.jpg',
+        badge: '100% Organik',
+        rating: '4.8 (310+)',
+        desc: 'Terbuat dari buah gambas/oyong kering alami. Mengembang lembut saat terkena air, menghasilkan busa melimpah, tidak menggores wajan teflon, dan 100% biodegradable.',
+        specs: ['Material: 100% Serat Gambas Kering', 'Ukuran: ± 10 x 6 cm (saat basah)', 'Daya Tahan: 2-3 Bulan', 'Perawatan: Bilas & gantung kering setelah pakai']
+      },
+      p3: {
+        id: 'p3',
+        name: 'Sedotan Stainless Steel 3in1',
+        category: 'kitchen',
+        price: 29000,
+        originalPrice: 45000,
+        image: 'assets/images/stainless-straws.jpg',
+        badge: 'Food Grade 304',
+        rating: '4.9 (580+)',
+        desc: 'Paket lengkap sedotan lurus, bengkok, dan sedotan boba tebal 12mm dari baja tahan karat Food Grade 304. Disertai sikat kawat pembersih dan kantong blacu alami.',
+        specs: ['Material: Stainless Steel Food Grade 304', 'Isi Paket: 1 Lurus, 1 Bengkok, 1 Boba, 1 Sikat, 1 Pouch Blacu', 'Bebas Karat & Dishwasher Safe', 'Panjang: 21,5 cm']
+      },
+      p4: {
+        id: 'p4',
+        name: 'Reusable Canvas Bag Eco',
+        category: 'travel',
+        price: 45000,
+        originalPrice: 65000,
+        image: 'assets/images/canvas-bag.jpg',
+        badge: 'Beban 15kg',
+        rating: '5.0 (890+)',
+        desc: 'Bahan katun twill tebal 12oz dengan jahitan X bertulang ganda. Mampu menampung belanjaan mingguan hingga 20 liter, lengkap dengan saku resleting dalam untuk dompet & ponsel.',
+        specs: ['Material: 100% Heavy Cotton Twill 12oz', 'Kapasitas Beban: s.d. 15 kg', 'Ukuran: 40 x 36 x 10 cm', 'Fitur: Saku dalam dengan resleting YKK']
+      }
+    };
+
+    let cart = [];
+    const DEFAULT_N8N_WEBHOOK = 'https://otomasi-n8n.de8x9i.easypanel.host/webhook/ecolestari-chat/chat';
+    let storedWebhookUrl = localStorage.getItem('ecolestari_n8n_url');
+    // Auto-migrate if stored URL is empty or points to the old workflow ID
+    if (!storedWebhookUrl || storedWebhookUrl.includes('LSMFzKxYT0KWrhCc')) {
+      storedWebhookUrl = DEFAULT_N8N_WEBHOOK;
+      localStorage.setItem('ecolestari_n8n_url', DEFAULT_N8N_WEBHOOK);
+    }
+    let n8nWebhookUrl = storedWebhookUrl;
+    const sessionId = 'eco_sess_' + Math.random().toString(36).substring(2, 9);
+    const sessionDisplay = document.getElementById('session-display-id');
+    if (sessionDisplay) sessionDisplay.innerText = sessionId;
+
+    // Set initial webhook UI label
+    window.addEventListener('DOMContentLoaded', () => {
+      const statusBar = document.getElementById('webhook-status-label');
+      const dot = document.getElementById('webhook-indicator-dot');
+      const floatingStatus = document.getElementById('floating-n8n-status');
+      if (n8nWebhookUrl) {
+        if (statusBar) statusBar.innerText = `Terhubung ke n8n Webhook: ${n8nWebhookUrl.substring(0, 42)}...`;
+        if (dot) dot.className = 'w-2 h-2 rounded-full bg-emerald-500 animate-pulse';
+        if (floatingStatus) floatingStatus.innerText = '⚡ Terhubung ke n8n (Live)';
+      }
+    });
+
+    // ==========================================
+    // 2. MOBILE MENU & HEADER BEHAVIOR
+    // ==========================================
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const hamburgerIcon = document.getElementById('hamburger-icon');
+    const closeIcon = document.getElementById('close-icon');
+
+    mobileMenuBtn.addEventListener('click', () => {
+      const isHidden = mobileMenu.classList.contains('hidden');
+      if (isHidden) {
+        mobileMenu.classList.remove('hidden');
+        hamburgerIcon.classList.add('hidden');
+        closeIcon.classList.remove('hidden');
+      } else {
+        mobileMenu.classList.add('hidden');
+        hamburgerIcon.classList.remove('hidden');
+        closeIcon.classList.add('hidden');
+      }
+    });
+
+    document.querySelectorAll('.mobile-nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+        hamburgerIcon.classList.remove('hidden');
+        closeIcon.classList.add('hidden');
+      });
+    });
+
+    // ==========================================
+    // 3. ECO IMPACT SLIDER CALCULATOR
+    // ==========================================
+    const sliderBags = document.getElementById('slider-bags');
+    const sliderBottles = document.getElementById('slider-bottles');
+    const sliderValBags = document.getElementById('slider-val-bags');
+    const sliderValBottles = document.getElementById('slider-val-bottles');
+
+    const calcPlasticSaved = document.getElementById('calc-plastic-saved');
+    const calcCarbonSaved = document.getElementById('calc-carbon-saved');
+    const calcMoneySaved = document.getElementById('calc-money-saved');
+
+    function updateEcoCalculator() {
+      const bagsPerWeek = parseInt(sliderBags.value);
+      const bottlesPerWeek = parseInt(sliderBottles.value);
+
+      sliderValBags.innerText = `${bagsPerWeek} kali`;
+      sliderValBottles.innerText = `${bottlesPerWeek} hari`;
+
+      // 1 year calculations:
+      const totalBagsYear = bagsPerWeek * 52;
+      const totalBottlesYear = bottlesPerWeek * 52;
+      const totalPlastics = totalBagsYear + totalBottlesYear;
+
+      // Carbon savings: ~0.06 kg CO2 per single use plastic item
+      const carbonKg = (totalPlastics * 0.06).toFixed(1);
+
+      // Money saved: ~Rp 3.000 per mineral bottle + Rp 500 per paid plastic bag
+      const money = (totalBottlesYear * 3000) + (totalBagsYear * 500);
+      const moneyFormatted = money >= 1000000 
+        ? `Rp ${(money / 1000000).toFixed(1)} Jt` 
+        : `Rp ${(money / 1000).toLocaleString('id-ID')} Rb`;
+
+      calcPlasticSaved.innerText = totalPlastics.toLocaleString('id-ID');
+      calcCarbonSaved.innerText = `${carbonKg} kg`;
+      calcMoneySaved.innerText = moneyFormatted;
+    }
+
+    if (sliderBags && sliderBottles) {
+      sliderBags.addEventListener('input', updateEcoCalculator);
+      sliderBottles.addEventListener('input', updateEcoCalculator);
+      updateEcoCalculator();
+    }
+
+    // ==========================================
+    // 4. UPCYCLING DIY TAB SWITCHER
+    // ==========================================
+    function switchDiyTab(tabName) {
+      const tshirtContent = document.getElementById('diy-tshirt-content');
+      const jarContent = document.getElementById('diy-jar-content');
+      const btnTshirt = document.getElementById('tab-btn-tshirt');
+      const btnJar = document.getElementById('tab-btn-jar');
+
+      if (tabName === 'tshirt') {
+        tshirtContent.classList.remove('hidden');
+        jarContent.classList.add('hidden');
+        btnTshirt.className = 'px-5 sm:px-8 py-2.5 rounded-xl font-bold text-sm transition-all bg-forest-800 text-white shadow-md';
+        btnJar.className = 'px-5 sm:px-8 py-2.5 rounded-xl font-bold text-sm transition-all text-slate-600 hover:text-forest-800 hover:bg-forest-50';
+      } else {
+        tshirtContent.classList.add('hidden');
+        jarContent.classList.remove('hidden');
+        btnJar.className = 'px-5 sm:px-8 py-2.5 rounded-xl font-bold text-sm transition-all bg-forest-800 text-white shadow-md';
+        btnTshirt.className = 'px-5 sm:px-8 py-2.5 rounded-xl font-bold text-sm transition-all text-slate-600 hover:text-forest-800 hover:bg-forest-50';
+      }
+    }
+
+    function openDiyModal(type) {
+      const modal = document.getElementById('diy-modal');
+      const title = document.getElementById('diy-modal-title');
+      const body = document.getElementById('diy-modal-body');
+
+      if (type === 'tshirt') {
+        title.innerText = 'Panduan Cetak: Kaos Bekas Jadi Tas Belanja';
+        body.innerHTML = `
+          <p class="font-bold text-slate-800">Alat: Kaos katun bekas, gunting kain.</p>
+          <ol class="list-decimal pl-4 space-y-2">
+            <li><strong>Langkah 1:</strong> Gunting kedua lengan kaos di batas jahitan untuk membentuk pegangan jinjing.</li>
+            <li><strong>Langkah 2:</strong> Potong kerah leher membentuk lengkungan U yang lebih dalam sebagai bukaan tas.</li>
+            <li><strong>Langkah 3:</strong> Potong rumbai bawah vertikal sepanjang 8-10 cm dan lebar 2 cm.</li>
+            <li><strong>Langkah 4:</strong> Ikat simpul ganda rumbai depan dan belakang dengan erat. Balik kaos jika ingin rumbai berada di dalam.</li>
+          </ol>
+          <p class="text-forest-800 font-semibold mt-3">✓ Selesai dalam 10 menit! Bebas dicuci berkali-kali.</p>
+        `;
+      } else {
+        title.innerText = 'Panduan Cetak: Botol Kaca Jadi Wadah Bumbu';
+        body.innerHTML = `
+          <p class="font-bold text-slate-800">Alat: Botol selai kaca, air hangat, minyak kelapa, stiker label.</p>
+          <ol class="list-decimal pl-4 space-y-2">
+            <li><strong>Langkah 1:</strong> Rendam botol dalam air hangat bersabun selama 15 menit agar kertas label melunak.</li>
+            <li><strong>Langkah 2:</strong> Usap bekas lem yang lengket dengan kapas berselimut minyak kelapa atau minyak kayu putih.</li>
+            <li><strong>Langkah 3:</strong> Bilas air panas mendidih untuk sterilisasi higienis dan keringkan.</li>
+            <li><strong>Langkah 4:</strong> Beri label nama rempah bumbu dapur dan tata rapi di rak.</li>
+          </ol>
+          <p class="text-forest-800 font-semibold mt-3">✓ Dapur estetik minim sampah ala Japandi!</p>
+        `;
+      }
+      modal.classList.remove('hidden');
+    }
+
+    function closeDiyModal() {
+      document.getElementById('diy-modal').classList.add('hidden');
+    }
+
+    // ==========================================
+    // 5. PRODUCT CATALOG FILTER & QUICK VIEW
+    // ==========================================
+    function filterProducts(category) {
+      document.querySelectorAll('.prod-filter-btn').forEach(btn => {
+        if (btn.dataset.category === category) {
+          btn.className = 'prod-filter-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-bold bg-forest-800 text-white shadow-sm transition-all';
+        } else {
+          btn.className = 'prod-filter-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold bg-slate-100 text-slate-700 hover:bg-forest-50 hover:text-forest-800 transition-all';
+        }
+      });
+
+      document.querySelectorAll('.product-card').forEach(card => {
+        if (category === 'all' || card.dataset.category === category) {
+          card.classList.remove('hidden');
+        } else {
+          card.classList.add('hidden');
+        }
+      });
+    }
+
+    function openProductQuickView(prodId) {
+      const prod = productsData[prodId];
+      if (!prod) return;
+
+      const modal = document.getElementById('product-quick-view-modal');
+      const content = document.getElementById('quick-view-content');
+
+      content.innerHTML = `
+        <div class="overflow-hidden rounded-2xl aspect-square bg-forest-50 border border-emerald-100">
+          <img src="${prod.image}" alt="${prod.name}" class="w-full h-full object-cover">
+        </div>
+        <div class="space-y-4">
+          <div>
+            <span class="text-xs font-bold text-forest-700 bg-forest-100 px-2.5 py-0.5 rounded-md">${prod.badge}</span>
+            <h3 class="font-display font-extrabold text-2xl text-slate-900 mt-2">${prod.name}</h3>
+            <div class="flex items-center gap-2 mt-1 text-xs">
+              <span class="text-amber-500 font-bold">★ ${prod.rating}</span>
+              <span class="text-slate-400">•</span>
+              <span class="text-forest-700 font-semibold">100% Zero Waste</span>
+            </div>
+          </div>
+          <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">${prod.desc}</p>
+          <div class="bg-slate-50 p-3 rounded-xl border border-slate-100">
+            <h5 class="text-xs font-bold text-slate-700 mb-1.5">Spesifikasi Material:</h5>
+            <ul class="text-xs text-slate-600 space-y-1">
+              ${prod.specs.map(s => `<li>• ${s}</li>`).join('')}
+            </ul>
+          </div>
+          <div class="flex items-baseline gap-2">
+            <span class="font-display font-black text-3xl text-forest-900">Rp ${prod.price.toLocaleString('id-ID')}</span>
+            <span class="text-sm text-slate-400 line-through">Rp ${prod.originalPrice.toLocaleString('id-ID')}</span>
+          </div>
+          <div class="pt-2 flex gap-3">
+            <button onclick="addToCart('${prod.id}', '${prod.name}', ${prod.price}, '${prod.image}'); closeProductQuickView();" class="flex-1 py-3 px-4 rounded-xl font-bold text-xs bg-forest-800 text-white shadow-md hover:bg-forest-900 transition-colors">
+              + Tambah ke Keranjang
+            </button>
+          </div>
+        </div>
+      `;
+
+      modal.classList.remove('hidden');
+    }
+
+    function closeProductQuickView() {
+      document.getElementById('product-quick-view-modal').classList.add('hidden');
+    }
+
+    // ==========================================
+    // 6. SHOPPING CART & WHATSAPP CHECKOUT
+    // ==========================================
+    function addToCart(id, name, price, image) {
+      const existing = cart.find(item => item.id === id);
+      if (existing) {
+        existing.qty += 1;
+      } else {
+        cart.push({ id, name, price, image, qty: 1 });
+      }
+      updateCartUI();
+      showToast(`✅ "${name}" berhasil ditambahkan ke keranjang!`);
+    }
+
+    function addBundleToCart() {
+      addToCart('p1', 'Sikat Gigi Bambu Alami', 18500, 'assets/images/bamboo-toothbrush.jpg');
+      addToCart('p2', 'Sponge Serat Loofah Alami', 15000, 'assets/images/loofah-sponge.jpg');
+      addToCart('p3', 'Sedotan Stainless Steel 3in1', 29000, 'assets/images/stainless-straws.jpg');
+      addToCart('p4', 'Reusable Canvas Bag Eco', 45000, 'assets/images/canvas-bag.jpg');
+      openCartDrawer();
+      showToast('🎉 Paket Bundle Hemat Komplit 4-in-1 berhasil ditambahkan!');
+    }
+
+    function updateCartUI() {
+      const badge = document.getElementById('cart-badge');
+      const drawerCount = document.getElementById('drawer-cart-count');
+      const itemsList = document.getElementById('cart-items-list');
+      const subtotalEl = document.getElementById('cart-subtotal');
+      const totalEl = document.getElementById('cart-total');
+      const checkoutBtn = document.getElementById('btn-whatsapp-checkout');
+
+      const totalItems = cart.reduce((sum, item) => sum + item.qty, 0);
+      const subtotal = cart.reduce((sum, item) => sum + (item.price * item.qty), 0);
+
+      // Badge in header
+      if (totalItems > 0) {
+        badge.innerText = totalItems;
+        badge.classList.remove('scale-0');
+        badge.classList.add('scale-100');
+        checkoutBtn.removeAttribute('disabled');
+      } else {
+        badge.classList.remove('scale-100');
+        badge.classList.add('scale-0');
+        checkoutBtn.setAttribute('disabled', 'true');
+      }
+
+      drawerCount.innerText = totalItems;
+      subtotalEl.innerText = `Rp ${subtotal.toLocaleString('id-ID')}`;
+      totalEl.innerText = `Rp ${subtotal.toLocaleString('id-ID')}`;
+
+      if (cart.length === 0) {
+        itemsList.innerHTML = `
+          <div id="cart-empty-state" class="text-center py-16 space-y-3">
+            <div class="text-5xl">🛍️</div>
+            <h4 class="font-bold text-base text-slate-800">Keranjang Masih Kosong</h4>
+            <p class="text-xs text-slate-500 max-w-xs mx-auto">
+              Mulai jelajahi starter kit ramah lingkungan dan tambahkan ke keranjang untuk mendukung gaya hidup bebas plastik!
+            </p>
+            <button onclick="closeCartDrawer(); window.location.hash = 'produk'" class="mt-2 px-5 py-2 rounded-xl font-bold text-xs bg-forest-800 text-white">
+              Jelajahi Produk
+            </button>
+          </div>
+        `;
+      } else {
+        itemsList.innerHTML = cart.map(item => `
+          <div class="flex items-center gap-3 p-3 bg-slate-50 rounded-2xl border border-slate-100">
+            <img src="${item.image}" alt="${item.name}" class="w-16 h-16 rounded-xl object-cover border border-slate-200">
+            <div class="flex-1 min-w-0">
+              <h5 class="text-xs font-bold text-slate-900 truncate">${item.name}</h5>
+              <p class="text-xs font-semibold text-forest-800">Rp ${item.price.toLocaleString('id-ID')}</p>
+              <div class="flex items-center gap-2 mt-1">
+                <button onclick="changeQty('${item.id}', -1)" class="w-6 h-6 rounded-lg bg-white border border-slate-200 text-slate-600 font-bold text-xs flex items-center justify-center hover:bg-slate-100">-</button>
+                <span class="text-xs font-bold text-slate-800 px-1">${item.qty}</span>
+                <button onclick="changeQty('${item.id}', 1)" class="w-6 h-6 rounded-lg bg-white border border-slate-200 text-slate-600 font-bold text-xs flex items-center justify-center hover:bg-slate-100">+</button>
+              </div>
+            </div>
+            <button onclick="removeFromCart('${item.id}')" class="text-slate-400 hover:text-earth p-1" title="Hapus Barang">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/></svg>
+            </button>
+          </div>
+        `).join('');
+      }
+    }
+
+    function changeQty(id, delta) {
+      const item = cart.find(i => i.id === id);
+      if (!item) return;
+      item.qty += delta;
+      if (item.qty <= 0) {
+        cart = cart.filter(i => i.id !== id);
+      }
+      updateCartUI();
+    }
+
+    function removeFromCart(id) {
+      cart = cart.filter(i => i.id !== id);
+      updateCartUI();
+      showToast('Barang dihapus dari keranjang.');
+    }
+
+    function openCartDrawer() {
+      const overlay = document.getElementById('cart-drawer-overlay');
+      const drawer = document.getElementById('cart-drawer');
+      overlay.classList.remove('hidden');
+      setTimeout(() => overlay.classList.remove('opacity-0'), 10);
+      drawer.classList.remove('translate-x-full');
+    }
+
+    function closeCartDrawer() {
+      const overlay = document.getElementById('cart-drawer-overlay');
+      const drawer = document.getElementById('cart-drawer');
+      drawer.classList.add('translate-x-full');
+      overlay.classList.add('opacity-0');
+      setTimeout(() => overlay.classList.add('hidden'), 300);
+    }
+
+    document.getElementById('open-cart-btn').addEventListener('click', openCartDrawer);
+
+    function checkoutViaWhatsApp() {
+      if (cart.length === 0) return;
+      const subtotal = cart.reduce((sum, item) => sum + (item.price * item.qty), 0);
+      let text = `Halo Admin EcoLestari! 🌱\nSaya ingin memesan starter kit zero waste:\n\n`;
+      cart.forEach((item, idx) => {
+        text += `${idx + 1}. ${item.name} (${item.qty}x) - Rp ${(item.price * item.qty).toLocaleString('id-ID')}\n`;
+      });
+      text += `\nTotal Belanja: Rp ${subtotal.toLocaleString('id-ID')}\nMohon informasi ongkos kirim dan metode pembayarannya ya. Terima kasih!`;
+      
+      const encoded = encodeURIComponent(text);
+      window.open(`https://wa.me/6281234567890?text=${encoded}`, '_blank');
+    }
+
+    // ==========================================
+    // 7. ZERO WASTE AI CHATBOT & n8n INTEGRATION
+    // ==========================================
+    const chatContainer = document.getElementById('chat-messages-container');
+    const chatInput = document.getElementById('chat-input-text');
+    const typingIndicator = document.getElementById('typing-indicator');
+
+    function focusChatInput() {
+      setTimeout(() => {
+        chatInput.focus();
+        chatInput.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }, 400);
+    }
+
+    function sendQuickPrompt(promptText) {
+      chatInput.value = promptText;
+      handleChatSubmit(new Event('submit'));
+    }
+
+    function appendMessage(sender, text) {
+      const messageDiv = document.createElement('div');
+      
+      if (sender === 'user') {
+        messageDiv.className = 'flex items-start justify-end gap-3 max-w-[85%] ml-auto';
+        messageDiv.innerHTML = `
+          <div class="bg-forest-800 text-white p-4 rounded-2xl rounded-tr-sm shadow-md text-slate-100 text-sm leading-relaxed">
+            <p>${escapeHtml(text)}</p>
+          </div>
+          <div class="w-8 h-8 rounded-xl bg-forest-100 text-forest-800 flex items-center justify-center shrink-0 text-xs font-bold shadow">
+            Anda
+          </div>
+        `;
+      } else {
+        messageDiv.className = 'flex items-start gap-3 max-w-[85%]';
+        messageDiv.innerHTML = `
+          <div class="w-8 h-8 rounded-xl bg-forest-700 text-white flex items-center justify-center shrink-0 text-sm shadow">
+            🌱
+          </div>
+          <div class="bg-white p-4 rounded-2xl rounded-tl-sm border border-emerald-100/90 shadow-sm text-slate-800 text-sm leading-relaxed space-y-2">
+            ${formatBotMarkdown(text)}
+          </div>
+        `;
+      }
+
+      chatContainer.appendChild(messageDiv);
+      chatContainer.scrollTop = chatContainer.scrollHeight;
+    }
+
+    function escapeHtml(text) {
+      return text.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+    }
+
+    function formatBotMarkdown(text) {
+      // Basic markdown parser for bold, lists, and linebreaks
+      let formatted = text
+        .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+        .replace(/\n\n/g, '</p><p>')
+        .replace(/\n- /g, '<br>• ')
+        .replace(/\n/g, '<br>');
+      return `<p>${formatted}</p>`;
+    }
+
+    async function handleChatSubmit(event) {
+      event.preventDefault();
+      const question = chatInput.value.trim();
+      if (!question) return;
+      chatInput.value = '';
+      await processUserChat(question, 'in-page');
+    }
+
+    async function handleFloatingChatSubmit(event) {
+      event.preventDefault();
+      const question = floatingChatInput.value.trim();
+      if (!question) return;
+      floatingChatInput.value = '';
+      await processUserChat(question, 'floating');
+    }
+
+    // Unified chat pipeline synchronizing both in-page & floating chats
+    async function processUserChat(question, origin) {
+      appendMessage('user', question);
+      appendFloatingMessage('user', question);
+
+      typingIndicator.classList.remove('hidden');
+      if (floatingTypingIndicator) floatingTypingIndicator.classList.remove('hidden');
+      chatContainer.scrollTop = chatContainer.scrollHeight;
+      if (floatingChatMessages) floatingChatMessages.scrollTop = floatingChatMessages.scrollHeight;
+
+      let answered = false;
+
+      // 1. Try communicating with user's configured n8n Webhook
+      if (n8nWebhookUrl) {
+        try {
+          const controller = new AbortController();
+          const timeoutId = setTimeout(() => controller.abort(), 7000); // 7s timeout
+
+          const response = await fetch(n8nWebhookUrl, {
+            method: 'POST',
+            headers: { 
+              'Content-Type': 'application/json',
+              'Accept': 'application/json, text/plain, */*'
+            },
+            signal: controller.signal,
+            body: JSON.stringify({
+              action: "sendMessage",
+              chatInput: question,
+              message: question,
+              sessionId: sessionId,
+              timestamp: new Date().toISOString(),
+              source: origin === 'floating' ? 'EcoLestari Floating Widget' : 'EcoLestari Web Page'
+            })
+          });
+          clearTimeout(timeoutId);
+
+          if (response.ok) {
+            const data = await response.json().catch(async () => {
+              const text = await response.text();
+              return { output: text };
+            });
+
+            let replyText = '';
+            if (typeof data === 'string') {
+              replyText = data;
+            } else if (data.output) {
+              replyText = data.output;
+            } else if (data.text) {
+              replyText = data.text;
+            } else if (data.reply) {
+              replyText = data.reply;
+            } else if (data.message) {
+              replyText = data.message;
+            } else if (data.response) {
+              replyText = data.response;
+            } else if (Array.isArray(data) && data[0]) {
+              replyText = data[0].output || data[0].text || data[0].message || JSON.stringify(data[0]);
+            } else {
+              replyText = JSON.stringify(data);
+            }
+
+            if (replyText && replyText !== '{}') {
+              typingIndicator.classList.add('hidden');
+              if (floatingTypingIndicator) floatingTypingIndicator.classList.add('hidden');
+
+              // Update status indicator to Live
+              const floatStatus = document.getElementById('floating-n8n-status');
+              if (floatStatus) floatStatus.innerHTML = '<span class="text-emerald-300">⚡ Terhubung ke n8n (Live)</span>';
+              const dot = document.getElementById('webhook-indicator-dot');
+              if (dot) dot.className = 'w-2 h-2 rounded-full bg-emerald-400 animate-pulse';
+
+              appendMessage('bot', replyText);
+              appendFloatingMessage('bot', replyText);
+              answered = true;
+              return;
+            }
+          } else {
+            console.warn(`n8n webhook responded with HTTP ${response.status}. Using smart internal AI engine.`);
+          }
+        } catch (err) {
+          console.warn('n8n Webhook connection note (using internal AI fallback):', err.message);
+        }
+      }
+
+      // 2. Intelligent Internal Knowledge Engine (When n8n is offline or 404)
+      if (!answered) {
+        setTimeout(() => {
+          typingIndicator.classList.add('hidden');
+          if (floatingTypingIndicator) floatingTypingIndicator.classList.add('hidden');
+
+          // Keep UI status informative without cluttering the chat with red errors
+          const floatStatus = document.getElementById('floating-n8n-status');
+          if (floatStatus) {
+            floatStatus.innerHTML = '<span class="text-emerald-200">🌱 EcoBot AI Aktif (Klik ⚙️ utk n8n)</span>';
+          }
+
+          const answer = getIntelligentZeroWasteAnswer(question);
+          appendMessage('bot', answer);
+          appendFloatingMessage('bot', answer);
+        }, 500);
+      }
+    }
+
+    // Comprehensive Zero Waste Knowledge Engine
+    function getIntelligentZeroWasteAnswer(query) {
+      const q = query.toLowerCase().trim();
+
+      // 1. Identity & Persona Inquiries
+      if (
+        q.includes('siapa anda') || q.includes('kamu siapa') || q.includes('siapa kamu') || 
+        q.includes('siapa dirimu') || q.includes('kamu bot apa') || q.includes('tentang anda') || 
+        q.includes('siapa namamu') || q.includes('kenalan') || q.includes('nama kamu') || 
+        q.includes('siapa lu') || q.includes('identitas') || q.includes('bisa bantu apa') || 
+        q.includes('apa yang bisa kamu lakukan')
+      ) {
+        return `Halo! Saya **EcoBot**, asisten kecerdasan buatan (AI) konsultan keberlanjutan dan gaya hidup minim sampah dari **EcoLestari Indonesia** 🌱.\n\n` +
+          `Misi saya adalah mendampingi Anda bertransformasi menuju hidup ramah lingkungan melalui solusi yang praktis, hemat biaya, dan mudah diterapkan di rumah tangga Indonesia.\n\n` +
+          `**Topik yang bisa saya bantu kapan saja:**\n` +
+          `- 🥬 **Komposting Rumahan:** Metode Takakura, biopori, ember tumpuk, maggot BSF, dan pencegahan bau.\n` +
+          `- 🥤 **Solusi Bebas Plastik:** Alternatif kantong kresek, sedotan stainless, beeswax wrap, dan tumbler.\n` +
+          `- ✂️ **Upcycling Kreatif:** Kaos bekas jadi tas belanja tanpa jahit, botol bumbu estetik, wadah daur ulang.\n` +
+          `- 🍳 **Minyak Jelantah & Limbah B3:** Penyaluran ke biodiesel, baterai bekas, e-waste, dan kemasan skincare.\n` +
+          `- 🛍️ **Starter Kit EcoLestari:** Sikat gigi bambu, loofah sponge, paket sedotan 3in1, dan tas kanvas.\n\n` +
+          `Ada yang ingin Anda diskusikan atau tanyakan hari ini? 😊`;
+      }
+
+      // 2. Greetings & Salutations (Randomized to avoid robotic repetitions)
+      if (
+        q.startsWith('halo') || q.startsWith('hai') || q.startsWith('hei') || 
+        q === 'hi' || q === 'hello' || q.includes('selamat pagi') || 
+        q.includes('selamat siang') || q.includes('selamat sore') || 
+        q.includes('selamat malam') || q === 'p' || q === 'tes' || 
+        q === 'test' || q.includes('assalam') || q === 'oy'
+      ) {
+        const greetings = [
+          `Halo, senang sekali bisa menyapa Anda! 🌱 Selamat datang di **EcoLestari**.\n\nBagaimana kabar Anda hari ini? Apakah Anda ingin konsultasi seputar pemilahan sampah dapur, panduan komposting, atau info produk starter kit ramah lingkungan? Silakan tanyakan apa saja! 🌍`,
+          `Hai! Salam lestari dari **EcoBot** 🌱. Senang Anda berkunjung hari ini.\n\nApakah ada jenis sampah di rumah yang sedang ingin Anda olah, atau ingin tips memulai kebiasaan bebas plastik sekali pakai? Saya siap membantu langkah demi langkah! ✨`,
+          `Halo sahabat bumi! 🌿 Ada yang bisa saya bantu hari ini seputar gaya hidup minim sampah (Zero Waste)? Dari urusan komposting tanpa bau sampai rekomendasi alternatif plastik, tanyakan saja ya! 😊`
+        ];
+        return greetings[Math.floor(Math.random() * greetings.length)];
+      }
+
+      // 3. How are you / Politeness
+      if (q.includes('apa kabar') || q.includes('gimana kabar') || q.includes('kabar kamu')) {
+        return `Kabar saya sangat baik dan penuh semangat untuk terus menjaga bumi kita tetap hijau dan bernafas lega 🌍! Bagaimana dengan Anda? Apakah ada sampah di rumah atau kebiasaan harian yang ingin Anda ubah menjadi lebih ramah lingkungan hari ini?`;
+      }
+
+      if (q.includes('makasih') || q.includes('terima kasih') || q.includes('thanks') || q.includes('thank you') || q.includes('tq') || q.includes('mantap') || q.includes('keren') || q.includes('oke')) {
+        return `Sama-sama! Senang sekali bisa berdiskusi dengan Anda 🌱. Ingat, setiap keputusan kecil Anda untuk menolak kantong kresek dan memilah sampah memiliki dampak luar biasa bagi masa depan bumi kita. Jika ada pertanyaan lain, jangan ragu untuk menyapa saya lagi ya! 💚`;
+      }
+
+      // 4. Definition of Zero Waste & 5R Principles
+      if (q.includes('apa itu zero waste') || q.includes('pengertian zero waste') || q.includes('arti zero waste') || q.includes('definisi zero waste') || q.includes('kenapa harus zero waste') || q.includes('tujuan zero waste') || q.includes('manfaat')) {
+        return `**Apa itu Gaya Hidup Minim Sampah (Zero Waste)?** 🌱\n\n` +
+          `Zero Waste bukanlah tentang menjadi manusia sempurna yang tidak memproduksi sampah sama sekali dalam semalam, melainkan **filosofi dan kesadaran untuk meminimalkan sampah** yang kita kirimkan ke Tempat Pembuangan Akhir (TPA) dan lautan.\n\n` +
+          `**Mengapa ini mendesak di Indonesia?**\n` +
+          `- Indonesia memproduksi lebih dari **65 juta ton sampah per tahun**, di mana sebagian besar berakhir mencemari sungai dan pesisir pantai kita.\n` +
+          `- Sampah plastik butuh 100-500 tahun untuk terurai menjadi mikroplastik yang meracuni rantai makanan dan kesehatan tubuh kita.\n\n` +
+          `**Kutipan Inspirasi:**\n` +
+          `*"Kita tidak membutuhkan segelintir orang yang menjalani zero waste secara sempurna. Kita membutuhkan jutaan orang yang melakukannya secara tidak sempurna namun konsisten."* — Anne-Marie Bonneau.\n\n` +
+          `Ingin tahu cara memulainya dari kebiasaan termudah di rumah? Ketik *"tips pemula"*! 💡`;
+      }
+
+      if (q.includes('5r') || q.includes('prinsip 5r') || q.includes('hirarki sampah') || q.includes('refuse reduce')) {
+        return `**5 Prinsip Utama Zero Waste (Hierarki 5R):**\n\n` +
+          `1. **Refuse (Tolak):** Tolak barang sekali pakai yang tidak esensial. Contoh: katakan *"tidak usah pakai sedotan"* saat pesan es teh, tolak kantong kresek di minimarket.\n` +
+          `2. **Reduce (Kurangi):** Batasi konsumsi berlebih. Beli barang yang benar-benar berkualitas awet dan habis terpakai.\n` +
+          `3. **Reuse (Gunakan Kembali):** Maksimalkan fungsi wadah/barang. Alihfungsikan toples kaca selai untuk bumbu, gunakan tote bag kanvas berkali-kali.\n` +
+          `4. **Rot (Komposkan):** Kembalikan sisa organik (kulit buah, sayuran mentah, ampas kopi) ke dalam tanah melalui komposting agar menjadi pupuk alami.\n` +
+          `5. **Recycle (Daur Ulang):** Jadikan daur ulang sebagai opsi terakhir setelah 4 langkah di atas, dengan cara mencuci bersih dan menyetorkannya ke Bank Sampah terdekat.\n\n` +
+          `Manakah dari 5R di atas yang sudah rutin Anda terapkan di rumah? 😊`;
+      }
+
+      // 5. Composting, Organic Waste & Food Waste
+      if (q.includes('kompos') || q.includes('komposting') || q.includes('pupuk') || q.includes('takakura') || q.includes('biopori') || q.includes('ember tumpuk') || q.includes('maggot') || q.includes('bsf') || q.includes('bokashi')) {
+        return `**Panduan Praktis Komposting Rumahan Bebas Bau:**\n\n` +
+          `1. **Pilih Metode Sesuai Tempat Tinggal:**\n` +
+          `   - **Kamar Kos / Apartemen:** Gunakan **Metode Takakura** (keranjang berventilasi dengan bantal sekam) atau **Ember Tumpuk**.\n` +
+          `   - **Rumah Berhalaman:** Pasang 2-3 pipa **Lubang Biopori** atau komposter drum komunal.\n\n` +
+          `2. **Rumus Keseimbangan C : N (Cokelat vs Hijau):**\n` +
+          `   - **Bahan Hijau (Nitrogen/Basah):** Sisa kulit buah, potongan sayur mentah, ampas kopi, kantong teh celup tanpa staples.\n` +
+          `   - **Bahan Cokelat (Karbon/Kering):** Daun kering, sekam padi, serbuk kayu, atau potongan kardus cokelat.\n\n` +
+          `3. **Trik Anti-Bau & Anti-Belatung:**\n` +
+          `   - Setiap memasukkan 1 mangkuk sampah basah, **selalu kubur atau tutupi dengan selapis tebal bahan cokelat** (daun kering/sekam).\n` +
+          `   - Jangan masukkan daging, tulang, kuah santan, atau minyak goreng karena memicu lalat dan bau busuk.\n` +
+          `   - Aduk seminggu sekali untuk memberi suplai oksigen bagi mikroba pengurai.\n\n` +
+          `Dalam 4-6 minggu, kompos siap panen menjadi humus hitam beraroma tanah hutan yang subur! 🌱`;
+      }
+
+      if (q.includes('tulang') || q.includes('daging') || q.includes('santan') || q.includes('minyak di kompos') || q.includes('sisa makanan basi')) {
+        return `**Mengelola Sampah Sisa Daging, Tulang, dan Kuah Berlemak:**\n\n` +
+          `- **Jangan masukkan ke komposter biasa (Takakura/Ember terbuka):** Daging dan minyak mengandung lemak hewani yang lambat terurai serta memicu bau anyir dan kedatangan tikus/belatung lalat hijau.\n` +
+          `- **Solusi Terbaik:**\n` +
+          `  1. **Bokashi Fermentasi:** Gunakan dedak Bokashi EM4 di wadah kedap udara (anaerob). Bakteri fermentasi mampu memecah protein hewani tanpa bau busuk.\n` +
+          `  2. **Biokonversi Maggot BSF:** Larva Black Soldier Fly adalah pengurai rakus yang sangat ampuh menghabiskan sisa daging dan tulang lunak dalam hitungan jam!\n` +
+          `  3. **Biopori Dalam:** Masukkan ke pipa biopori tanah yang dalam dan tutup rapat penutupnya. 🕳️`;
+      }
+
+      if (q.includes('eco enzyme') || q.includes('eko enzim') || q.includes('kulit buah') || q.includes('ampas kopi') || q.includes('cangkang telur')) {
+        if (q.includes('ampas kopi')) {
+          return `**Manfaat Ampas Kopi untuk Zero Waste Rumah Tangga:**\n\n` +
+            `1. **Penetral Bau Alami:** Keringkan ampas kopi di bawah matahari, letakkan di wadah kecil di dalam kulkas atau rak sepatu untuk menyerap bau tak sedap.\n` +
+            `2. **Pupuk Tanaman Asidofil:** Taburkan sedikit ampas kopi kering di sekitar akar tanaman yang suka tanah agak asam (seperti cabai, tomat, dan mawar).\n` +
+            `3. **Pengusir Semut & Siput:** Semut tidak menyukai tekstur dan aroma asam dari ampas kopi. Taburkan di jalur semut di dapur Anda! ☕`;
+        }
+        if (q.includes('cangkang telur')) {
+          return `**Pemanfaatan Cangkang Telur:**\n\n` +
+            `1. **Kalsium Tanaman:** Rebus sebentar cangkang telur untuk membunuh bakteri salmonella, tumbuk halus menjadi serbuk putih, dan taburkan ke pot tanaman untuk mencegah busuk ujung buah (*blossom end rot*).\n` +
+            `2. **Pembersih Alami Kerak Wajan:** Remahan cangkang telur yang kasar dapat digunakan bersama sabun pencuci piring untuk menggosok kerak gosong wajan tanpa merusak enamel! 🍳`;
+        }
+        return `**Panduan Membuat Eco-Enzyme (Cairan Pembersih Serbaguna):**\n\n` +
+          `**Rumus Emas Formula 1 : 3 : 10:**\n` +
+          `- **1 Bagian:** Gula merah tebu / tetes tebu / molase (misal: 100 gram)\n` +
+          `- **3 Bagian:** Kulit buah segar (jeruk, nanas, apel, semangka) — 300 gram\n` +
+          `- **10 Bagian:** Air bersih / air sumur / air hujan — 1000 ml (1 Liter)\n\n` +
+          `**Cara Membuat:**\n` +
+          `1. Campurkan semua bahan ke dalam botol atau jeriken plastik (jangan gunakan toples kaca karena menghasilkan gas).\n` +
+          `2. Buka tutup botol sebentar setiap hari pada 2 minggu pertama untuk membuang gas.\n` +
+          `3. Simpan di tempat sejuk terlindung dari sinar matahari selama **3 bulan (90 hari)**.\n` +
+          `4. Saring cairannya: Anda mendapatkan cairan disinfektan alami, pel lantai aromatik, dan pembersih kompor bebas bahan kimia sintetis! 🍊✨`;
+      }
+
+      // 6. Plastic, Bags, Straws & Packaging Alternatives
+      if (q.includes('plastik') || q.includes('kresek') || q.includes('kantong') || q.includes('sedotan') || q.includes('styrofoam') || q.includes('bungkus') || q.includes('cling wrap') || q.includes('kemasan')) {
+        if (q.includes('sedotan')) {
+          return `**Alternatif Pengganti Sedotan Plastik Sekali Pakai:**\n\n` +
+            `- **Sedotan Stainless Steel 304:** Sangat awet, higienis, dan mudah dibersihkan dengan sikat kawat kecil (kami menyediakan paket lengkap 3in1 di katalog produk!).\n` +
+            `- **Sedotan Bambu Alami:** Terbuat dari batang bambu asli yang halus dan 100% biodegradable jika sudah usang.\n` +
+            `- **Sedotan Kaca Borosilikat:** Transparan sehingga mudah melihat kebersihannya di bagian dalam.\n` +
+            `- **Minum Langsung (Sip):** Opsi paling sederhana dan bebas sampah—minum langsung dari tepi gelas tanpa memerlukan sedotan sama sekali! 🥤`;
+        }
+        if (q.includes('styrofoam') || q.includes('gabus')) {
+          return `**Mengapa Wajib Berhenti Menggunakan Wadah Styrofoam?**\n\n` +
+            `- **Bahaya Kesehatan:** Bahan dasar styrofoam adalah *polistirena* dan *benzena*. Saat bersentuhan dengan makanan panas, berminyak, atau asam, senyawa karsinogenik ini mudah larut ke dalam makanan kita.\n` +
+            `- **Dampak Lingkungan:** Styrofoam membutuhkan waktu lebih dari **500 tahun** untuk terurai dan sangat rapuh sehingga mudah pecah menjadi jutaan serpihan mikroplastik di laut.\n` +
+            `- **Alternatif Praktis:** Selalu simpan kotak makan silikon lipat (*collapsible box*) atau tempat makan stainless steel di bagasi motor atau tas kerja saat ingin membeli makanan bungkus di luar! 🍱`;
+        }
+        return `**Langkah Mudah Mengurangi Plastik Sekali Pakai di Indonesia:**\n\n` +
+          `1. **Belanja Pasar & Minimarket:** Selalu bawa tas belanja kain lipat atau tote bag kanvas di tas kerja Anda.\n` +
+          `2. **Minuman Harian:** Bawa tumbler isi ulang 600ml-1L. Menghemat rata-rata 250+ botol plastik air mineral per orang setiap tahunnya.\n` +
+          `3. **Kemasan Makanan:** Tolak sendok plastik dan styrofoam dengan membawa sendok lipat dan kotak makan pribadi.\n` +
+          `4. **Penyimpanan Makanan:** Ganti *cling wrap* plastik dengan **Beeswax Wrap** (kain katun berlapis lilin lebah) atau piring penutup biasa.\n\n` +
+          `Setiap kali Anda menolak satu kantong kresek, Anda menyelamatkan satwa laut dari ancaman jeratan sampah plastik! 🌊🐢`;
+      }
+
+      // 7. Ecobricks
+      if (q.includes('ecobrick') || q.includes('batu bata plastik') || q.includes('botol pet')) {
+        return `**Panduan Lengkap Standar Pembuatan Ecobrick yang Benar:**\n\n` +
+          `1. **Pilih Botol:** Gunakan botol PET bening ukuran seragam (misal 600 ml) yang telah dicuci bersih dan kering sempurna.\n` +
+          `2. **Syarat Plastik Pengisi:** Semua plastik non-daur ulang lembut (bungkus snack, sachet kopi, kresek tipis, plastik paket). **Wajib 100% kering dan bebas sisa minyak/gula** agar tidak timbul bakteri pembusuk atau gas anaerob.\n` +
+          `3. **Teknik Memadatkan:** Masukkan plastik sedikit demi sedikit, lalu tusuk dan tekan sekuat tenaga menggunakan tongkat kayu tumpul.\n` +
+          `4. **Standar Kepadatan Internasional:** Berat minimal ecobrick adalah **0.33 gram per mililiter**:\n` +
+          `   - Botol 600 ml = berat minimal **200 - 250 gram**.\n` +
+          `   - Botol 1500 ml = berat minimal **500 gram**.\n` +
+          `   - Indikator: Saat ditekan dengan jempol atau diinjak kaki, botol harus sekeras kayu dan tidak boleh kempes.\n` +
+          `5. **Pemanfaatan:** Susun ecobrick dengan lem silikon menjadi kursi teras, meja sudut, atau pembatas pot taman komunitas! 🧱`;
+      }
+
+      // 8. Used Cooking Oil (Minyak Jelantah)
+      if (q.includes('minyak') || q.includes('jelantah') || q.includes('gorengan') || q.includes('wastafel') || q.includes('got') || q.includes('saluran air')) {
+        return `**Stop Membuang Minyak Jelantah ke Wastafel atau Selokan!** 🚫\n\n` +
+          `Membuang minyak goreng bekas ke saluran air akan membuat minyak membeku dan bereaksi dengan sabun membentuk batu lemak raksasa (*fatberg*). Hal ini merusak pipa got, mencemari air tanah warga, dan menjadi sarang kuman penyakit.\n\n` +
+          `**Langkah Bijak Pengelolaan Jelantah:**\n` +
+          `1. Diamkan minyak hingga dingin setelah memasak, lalu saring remah tepung/bumbu gosong.\n` +
+          `2. Tuang dan kumpulkan ke dalam jeriken atau botol minyak bekas yang tertutup rapat.\n` +
+          `3. Setelah terkumpul 3–5 liter, setorkan ke:\n` +
+          `   - **Platform BeliJelantah / Noovoleum / Jelantah4Change:** Minyak Anda akan dibeli tunai (Rp 5.000–8.000/liter)!\n` +
+          `   - **Bank Sampah Terdekat:** Diolah secara resmi menjadi bahan bakar **Biodiesel (B35/B40)** ramah lingkungan untuk transportasi umum.\n\n` +
+          `Dapur bersih, saluran air lancar, dan dapat uang tambahan! 🚗⚡`;
+      }
+
+      // 9. Skincare & Cosmetic Waste
+      if (q.includes('skincare') || q.includes('kosmetik') || q.includes('botol serum') || q.includes('wadah krim') || q.includes('make up') || q.includes('lipstik')) {
+        return `**Cara Tepat Mengelola Kemasan Kosmetik & Skincare Kosong:**\n\n` +
+          `1. **Kuras & Bersihkan (Empty & Rinse):** Buka tutup botol, kerok sisa serum/krim dengan spatula mini, bilas air hangat dengan setetes sabun, lalu jemur hingga kering.\n` +
+          `2. **Pilah Komponen:**\n` +
+          `   - **Kaca bening/amber:** Simpan untuk botol isi ulang minyak esensial atau setorkan ke bank sampah.\n` +
+          `   - **Pipet:** Lepaskan karet pipet, kaca tetes, dan ring plastik karena ketiga bahan ini didaur ulang di jalur berbeda.\n` +
+          `3. **Manfaatkan Program Drop-Point Kosmetik:**\n` +
+          `   Bawa wadah kosong Anda ke gerai seperti **Sociolla (Sukha Recycle Box)**, **Sensatia Botanicals**, atau **The Body Shop**. Anda bisa menukarkannya dengan reward poin belanja diskon! 💄🧴`;
+      }
+
+      // 10. Clothes & Upcycling DIY
+      if (q.includes('kaos') || q.includes('baju') || q.includes('kain') || q.includes('pakaian') || q.includes('jeans') || q.includes('upcycle') || q.includes('upcycling') || q.includes('diy') || q.includes('celana')) {
+        return `**Ide Kreatif Upcycling Pakaian Bekas (Tanpa Jahit):**\n\n` +
+          `1. **Kaos Katun Usang → Tas Belanja Jinjing (No-Sew Tote Bag):**\n` +
+          `   - Gunting kedua lengan kaos di batas jahitan untuk pegangan tas.\n` +
+          `   - Potong kerah leher membentuk huruf U yang lebih dalam sebagai bukaan tas.\n` +
+          `   - Gunting keliman bawah secara vertikal sepanjang 8 cm dengan lebar 2 cm membentuk rumbai.\n` +
+          `   - Ikat simpul mati tiap pasang rumbai depan dan belakang dengan erat. Balik kaos dan tas belanja siap menampung beban 8 kg belanjaan pasar!\n\n` +
+          `2. **Celana Jeans Rusak:** Bahan denim tebal sangat awet untuk disulap menjadi apron dapur tahan panas atau sleeve sarung laptop tahan benturan.\n` +
+          `3. **Kain Perca Katun:** Gunting kotak 20x20 cm sebagai lap serbet pembersih kompor (*un-paper towels*) pengganti tisu gulung sekali pakai. 👕✂️`;
+      }
+
+      // 11. Batteries & E-Waste (Hazardous B3)
+      if (q.includes('baterai') || q.includes('elektronik') || q.includes('e-waste') || q.includes('lampu') || q.includes('kabel') || q.includes('b3') || q.includes('aki') || q.includes('hp')) {
+        return `**Pengelolaan Sampah Elektronik (E-Waste) & Baterai Bekas:**\n\n` +
+          `Baterai bekas, lampu neon, ponsel rusak, dan aki mengandung logam berat sangat beracun (merkuri, timbal, lithium, kadmium). **Dilarang keras membuangnya ke tempat sampah umum** karena saat tercampur di TPA, racunnya akan merembes dan meracuni sumur air warga.\n\n` +
+          `**Langkah Pengelolaan:**\n` +
+          `1. Siapkan satu kardus khusus di rumah bertuliskan *"Limbah B3 & Baterai Bekas"*.\n` +
+          `2. Isolasi kutub positif dan negatif baterai dengan selotip bening agar tidak memicu korsleting gesekan api.\n` +
+          `3. Bawa ke **Dropbox E-Waste** yang disediakan oleh Dinas Lingkungan Hidup (DLH) di kantor kelurahan/kecamatan, stasiun MRT/KRL Jakarta, atau drop point Waste4Change. Logam berharganya akan diekstrak secara aman oleh pengolah resmi berizin. 🔋`;
+      }
+
+      // 12. Products, Pricing & Shopping Inquiries
+      if (q.includes('harga') || q.includes('beli') || q.includes('katalog') || q.includes('ongkir') || q.includes('starter kit') || q.includes('paket') || q.includes('produk') || q.includes('promo') || q.includes('pesan') || q.includes('toko')) {
+        if (q.includes('sikat gigi') || q.includes('bambu')) {
+          return `**Sikat Gigi Bambu Moso Alami EcoLestari:**\n\n` +
+            `- **Harga Promo:** **Rp 18.500** (Diskon dari harga normal Rp 25.000)\n` +
+            `- **Spesifikasi:** Gagang 100% bambu moso antibakteri organik, bulu sikat nilon lembut BPA-free aman untuk gusi sensitif.\n` +
+            `- **Nilai Ramah Lingkungan:** Gagang dapat dikomposkan alami di tanah setelah bulu dicabut dengan pinset.\n` +
+            `- **Cara Beli:** Anda bisa klik tombol **+ Keranjang** di katalog seksi Produk Hijau atau langsung chat WhatsApp kami! 🪥`;
+        }
+        if (q.includes('loofah') || q.includes('spons') || q.includes('sponge') || q.includes('oyong') || q.includes('gambas')) {
+          return `**Sponge Serat Loofah Alami EcoLestari:**\n\n` +
+            `- **Harga Promo:** **Rp 15.000** (Diskon dari harga normal Rp 22.000)\n` +
+            `- **Spesifikasi:** 100% serat tanaman oyong kering alami. Mengembang lembut saat terkena air, menghasilkan busa melimpah, dan bebas gores untuk wajan teflon.\n` +
+            `- **Keunggulan:** **Zero Microplastic**—tidak merontokkan partikel mikroplastik berbahaya ke saluran air cucian piring Anda. Habis pakai bisa langsung masuk komposter! 🧽`;
+        }
+        if (q.includes('sedotan') || q.includes('stainless') || q.includes('boba')) {
+          return `**Paket Sedotan Stainless Steel 3in1 Set EcoLestari:**\n\n` +
+            `- **Harga Promo:** **Rp 29.000** (Diskon dari harga normal Rp 45.000)\n` +
+            `- **Isi Paket:** 1 sedotan lurus, 1 sedotan bengkok, 1 sedotan boba 12mm, 1 sikat kawat pembersih, dan 1 pouch blacu alami higienis.\n` +
+            `- **Material:** Baja tahan karat Food Grade 304, bebas karat, dan aman dicuci berulang kali. 🥤`;
+        }
+        if (q.includes('tas') || q.includes('tote') || q.includes('kanvas') || q.includes('bag')) {
+          return `**Reusable Canvas Bag Heavy 12oz EcoLestari:**\n\n` +
+            `- **Harga Promo:** **Rp 45.000** (Diskon dari harga normal Rp 65.000)\n` +
+            `- **Spesifikasi:** Bahan katun twill tebal 12oz dengan jahitan X bertulang ganda. Mampu menahan beban belanja hingga 15 kg, muat 20 liter, dan dilengkapi saku resleting dalam untuk ponsel/dompet.\n` +
+            `- **Dampak:** Menggantikan lebih dari 300 kantong kresek sekali pakai per tahun! 🛍️`;
+        }
+        return `**Katalog Produk Starter Kit Zero Waste EcoLestari:**\n\n` +
+          `1. **Sikat Gigi Bambu Alami:** Rp 18.500 (Hemat 26%)\n` +
+          `2. **Sponge Serat Loofah Alami:** Rp 15.000 (Hemat 32%)\n` +
+          `3. **Sedotan Stainless Steel 3in1:** Rp 29.000 (Hemat 35%)\n` +
+          `4. **Reusable Canvas Bag 12oz:** Rp 45.000 (Hemat 30%)\n\n` +
+          `🔥 **Paket Bundle Komplit (4-in-1):** Cuma **Rp 99.000** (Hemat Rp 57.500 + Bebas Ongkir se-Jawa & Jabodetabek).\n\n` +
+          `Silakan klik tombol **Keranjang Belanja** di pojok kanan atas atau klik tombol pesan instan via WhatsApp untuk memesan hari ini! 🛒`;
+      }
+
+      // 13. Getting Started & Family Lifestyle
+      if (q.includes('mulai') || q.includes('pemula') || q.includes('keluarga') || q.includes('suami') || q.includes('istri') || q.includes('anak') || q.includes('kos') || q.includes('apartemen') || q.includes('mahal') || q.includes('biaya')) {
+        return `**Tips Memulai Gaya Hidup Minim Sampah untuk Pemula & Keluarga:**\n\n` +
+          `1. **Apakah Zero Waste itu Mahal? Mitos!**\n` +
+          `   Faktanya, membawa tumbler sendiri menghemat pengeluaran air minum Rp 1–2 juta per tahun. Berhenti membeli kantong kresek dan menggunakan kembali toples bekas justru membuat dompet Anda jauh lebih hemat!\n\n` +
+          `2. **4 Kebiasaan Awal Paling Mudah:**\n` +
+          `   - Selalu bawa tumbler air minum dan tas belanja kain ke mana pun Anda pergi.\n` +
+          `   - Tolak sedotan plastik dan tisu berlebih saat makan di luar.\n` +
+          `   - Pasang 2 tempat sampah di dapur: satu untuk **organik sisa makanan**, satu untuk **anorganik kering (kertas/plastik/kaca)**.\n` +
+          `   - Habiskan makanan yang diambil (zero food waste).\n\n` +
+          `3. **Tips Mengajak Keluarga:**\n` +
+          `   Jangan menggurui atau menuntut keluarga langsung sempurna. Mulailah dengan memberi contoh nyata, sediakan botol minum keren untuk anak, dan rayakan setiap pengurangan sampah di rumah bersama-sama! 💚`;
+      }
+
+      // 14. Specific Materials (Paper, Receipts, Glass, Cans, Detergent)
+      if (q.includes('kertas') || q.includes('kardus') || q.includes('struk') || q.includes('tisu')) {
+        if (q.includes('struk')) {
+          return `**Fakta Penting Seputar Struk Belanja (Kertas Thermal):**\n\n` +
+            `- **Jangan Didaur Ulang dan Jangan Dikomposkan!** Struk kasir terbuat dari kertas thermal yang dilapisi bahan kimia **Bisphenol A (BPA)** atau BPS yang berbahaya bagi hormon manusia dan mencemari tanah kompos.\n` +
+            `- **Langkah Bijak:** Tolak struk kertas di kasir jika tidak diperlukan untuk klaim garansi/reimburse, atau pilih opsi *e-receipt* (struk digital via email/WhatsApp). Jika terpaksa menerima struk, buang ke tempat sampah residu umum. 🧾`;
+        }
+        return `**Pengelolaan Sampah Kertas, Kardus, dan Tisu:**\n\n` +
+          `- **Kardus & Kertas HVS:** Merupakan komoditas daur ulang bernilai tinggi di Bank Sampah. Lipat rata dan simpan di tempat kering agar tidak lembap atau berjamur.\n` +
+          `- **Tisu Bekas:** Tisu wajah dan tisu dapur tidak bisa didaur ulang karena serat kayunya sudah terlalu pendek dan telah terkena cairan tubuh/minyak. Ganti tisu dapur dengan serbet kain katun yang dapat dicuci berulang kali! 🧻`;
+      }
+
+      if (q.includes('kaca') || q.includes('beling') || q.includes('pecah')) {
+        return `**Penanganan Pecahan Kaca & Botol Beling yang Aman:**\n\n` +
+          `1. **Lindungi Petugas Kebersihan:** Jangan pernah membuang beling tajam langsung ke dalam kantong sampah tipis karena dapat melukai tangan pemulung dan petugas kebersihan.\n` +
+          `2. **Cara Aman:** Bungkus pecahan kaca dengan kertas koran atau kardus tebal, rekatkan dengan selotip erat, dan tuliskan secara jelas dengan spidol: **"HATI-HATI PECAHAN KACA"**.\n` +
+          `3. **Botol Utuh:** Botol sirup atau selai utuh dapat dicuci bersih dan dijual kembali ke pengepul botol bekas atau disterilkan untuk wadah dapur estetik. 🍯`;
+      }
+
+      if (q.includes('sabun') || q.includes('shampoo') || q.includes('deterjen') || q.includes('lerak')) {
+        return `**Solusi Sabun & Pembersih Ramah Lingkungan di Rumah:**\n\n` +
+          `1. **Beralih ke Sabun Batang Alami:** Mengganti sabun mandi cair dan shampoo botol dengan sabun batang (*bar soap/solid shampoo*) langsung memotong puluhan botol plastik per tahun.\n` +
+          `2. **Buah Lerak untuk Mencuci Baju:** Ekstrak buah lerak mengandung busa saponin alami yang sangat lembut untuk pakaian batik, tidak merusak kulit sensitif, dan air bekas cuciannya aman disiramkan ke tanaman pekarangan.\n` +
+          `3. **Kunjungi Bulk Store (Toko Curah):** Beli deterjen cair dengan membawa jeriken sendiri dari rumah ke toko refill terdekat di kota Anda. 🧼✨`;
+      }
+
+      // 15. Intelligent Dynamic Contextual Synthesizer (Tailored to the user's specific query)
+      const cleanSubject = q.replace(/^(bagaimana|gimana|cara|apa|kenapa|mengapa|apakah|tolong|bisa|jelaskan|tips|rekomendasi)\s+/g, '').replace(/[?!.]/g, '').trim();
+
+      return `Mengenai pertanyaan Anda seputar **"${escapeHtml(query)}"**:\n\n` +
+        `Dalam prinsip hidup berkelanjutan (Zero Waste), penanganan untuk **${cleanSubject || 'kebutuhan harian'}** dapat didekati melalui langkah praktis berikut:\n\n` +
+        `1. **Tinjau Sumbernya (Pencegahan):** Evaluasi apakah barang atau kemasan tersebut bisa dihindari sejak proses pembelian dengan memilih opsi tanpa kemasan atau berbelanja di pasar lokal curah.\n` +
+        `2. **Maksimalkan Siklus Pakai (Reuse & Repurpose):** Sebelum memutuskan untuk membuangnya, cek apakah materialnya masih kokoh untuk dialihfungsikan sebagai wadah serbaguna, pot tanaman, atau kerajinan tangan di rumah.\n` +
+        `3. **Penyaluran Bijak (Pilah & Salurkan):** Jika sudah mencapai batas usia pakainya, bersihkan dari sisa minyak atau kotoran basah, pisahkan sesuai kategorinya, lalu serahkan ke Bank Sampah atau drop-point daur ulang terdekat.\n\n` +
+        `Apakah Anda ingin panduan yang lebih terperinci mengenai cara memilahnya di rumah, solusi alternatif bahannya, atau ide upcycling kreatif? Silakan tanyakan, saya selalu siap mendampingi Anda! 🌱`;
+    }
+
+    function resetChatHistory() {
+      chatContainer.innerHTML = `
+        <div class="flex items-start gap-3 max-w-[85%]">
+          <div class="w-8 h-8 rounded-xl bg-forest-700 text-white flex items-center justify-center shrink-0 text-sm shadow">
+            🌱
+          </div>
+          <div class="bg-white p-4 rounded-2xl rounded-tl-sm border border-emerald-100/90 shadow-sm text-slate-800 text-sm leading-relaxed space-y-2">
+            <p>Riwayat percakapan telah dibersihkan. Halo kembali! Ada yang bisa EcoBot bantu terkait gaya hidup minim sampah hari ini? 🌍</p>
+          </div>
+        </div>
+      `;
+      showToast('Percakapan telah direset.');
+    }
+
+    // ==========================================
+    // 8. n8n WEBHOOK CONFIG MODAL & PRO WORKFLOW
+    // ==========================================
+    function openN8nConfigModal() {
+      const modal = document.getElementById('n8n-config-modal');
+      const input = document.getElementById('n8n-webhook-url');
+      input.value = n8nWebhookUrl;
+      modal.classList.remove('hidden');
+    }
+
+    function closeN8nConfigModal() {
+      document.getElementById('n8n-config-modal').classList.add('hidden');
+    }
+
+    function saveN8nWebhook() {
+      const url = document.getElementById('n8n-webhook-url').value.trim();
+      n8nWebhookUrl = url;
+      localStorage.setItem('ecolestari_n8n_url', url);
+      
+      const statusBar = document.getElementById('webhook-status-label');
+      const dot = document.getElementById('webhook-indicator-dot');
+      const floatingStatus = document.getElementById('floating-n8n-status');
+
+      if (url) {
+        if (statusBar) statusBar.innerText = `Terhubung ke n8n Webhook: ${url.substring(0, 32)}...`;
+        if (dot) dot.className = 'w-2 h-2 rounded-full bg-emerald-500 animate-pulse';
+        if (floatingStatus) floatingStatus.innerText = '⚡ Terhubung ke n8n (Live)';
+        showToast('✅ Webhook n8n berhasil disimpan & diaktifkan!');
+      } else {
+        if (statusBar) statusBar.innerText = 'Mode Asisten Cerdas Mandiri (Siap dihubungkan ke Webhook n8n)';
+        if (dot) dot.className = 'w-2 h-2 rounded-full bg-forest-500';
+        if (floatingStatus) floatingStatus.innerText = '🌱 Mode AI Internal (Aktif)';
+        showToast('Mode cerdas internal diaktifkan.');
+      }
+      closeN8nConfigModal();
+    }
+
+    function clearN8nWebhook() {
+      document.getElementById('n8n-webhook-url').value = '';
+      saveN8nWebhook();
+    }
+
+    async function testN8nConnection() {
+      const url = document.getElementById('n8n-webhook-url').value.trim();
+      if (!url) {
+        alert('Silakan masukkan URL Webhook n8n terlebih dahulu.');
+        return;
+      }
+      try {
+        const res = await fetch(url, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            action: 'sendMessage',
+            chatInput: 'ping_test_connection',
+            message: 'ping_test_connection',
+            sessionId: sessionId,
+            timestamp: new Date().toISOString()
+          })
+        });
+        const data = await res.json().catch(() => ({}));
+        if (res.ok) {
+          alert('✅ SUKSES! Webhook n8n terdeteksi aktif dan merespons dengan baik (HTTP ' + res.status + '). Chatbot Anda sekarang 100% terhubung!');
+        } else if (res.status === 404) {
+          alert('⚠️ PERHATIAN (HTTP 404 Not Found):\n\nWebhook "' + url + '" belum aktif di n8n.\n\nCara Cepat Mengaktifkannya:\n1. Buka n8n di https://otomasi-n8n.de8x9i.easypanel.host/workflow/LSMFzKxYT0KWrhCc\n2. Klik tombol "Save" (atau tekan Ctrl+S).\n3. Matikan saklar "Publish" di pojok kanan atas, lalu klik nyalakan kembali ke "Publish" (warna Hijau).\n4. Tunggu 3-5 detik lalu klik tombol "Uji Ping Webhook" ini kembali.');
+        } else {
+          alert('⚠️ Terhubung namun mendapat respon status: ' + res.status + '\nPesan: ' + (data.message || JSON.stringify(data)));
+        }
+      } catch (err) {
+        alert('❌ Gagal menghubungi webhook: ' + err.message + '\n\nPastikan URL benar dan instans n8n Anda mengizinkan CORS jika diakses langsung dari browser.');
+      }
+    }
+
+    async function copyProWorkflowJson() {
+      try {
+        const res = await fetch('n8n-workflow-reference.json');
+        const text = await res.text();
+        await navigator.clipboard.writeText(text);
+        showToast('📋 JSON Workflow Pro berhasil disalin! Buka n8n lalu tekan Ctrl+V.');
+      } catch (err) {
+        showToast('Silakan salin isi file n8n-workflow-reference.json secara manual.');
+      }
+    }
+
+    // ==========================================
+    // FLOATING CHATBOT WIDGET CONTROLLERS
+    // ==========================================
+    let isFloatingChatOpen = false;
+    const floatingChatWindow = document.getElementById('floating-chat-window');
+    const fabChatIcon = document.getElementById('fab-chat-icon');
+    const fabCloseIcon = document.getElementById('fab-close-icon');
+    const fabTooltip = document.getElementById('chat-fab-tooltip');
+    const floatingChatMessages = document.getElementById('floating-chat-messages');
+    const floatingChatInput = document.getElementById('floating-chat-input');
+    const floatingTypingIndicator = document.getElementById('floating-typing-indicator');
+
+    function toggleFloatingChat() {
+      isFloatingChatOpen = !isFloatingChatOpen;
+      if (isFloatingChatOpen) {
+        floatingChatWindow.classList.remove('hidden');
+        setTimeout(() => {
+          floatingChatWindow.classList.remove('scale-95', 'opacity-0');
+          floatingChatWindow.classList.add('scale-100', 'opacity-100');
+        }, 10);
+        fabChatIcon.classList.add('hidden');
+        fabCloseIcon.classList.remove('hidden');
+        if (fabTooltip) fabTooltip.classList.add('hidden');
+        floatingChatInput.focus();
+        floatingChatMessages.scrollTop = floatingChatMessages.scrollHeight;
+      } else {
+        floatingChatWindow.classList.remove('scale-100', 'opacity-100');
+        floatingChatWindow.classList.add('scale-95', 'opacity-0');
+        setTimeout(() => {
+          floatingChatWindow.classList.add('hidden');
+        }, 300);
+        fabChatIcon.classList.remove('hidden');
+        fabCloseIcon.classList.add('hidden');
+      }
+    }
+
+    function sendFloatingPrompt(promptText) {
+      floatingChatInput.value = promptText;
+      handleFloatingChatSubmit(new Event('submit'));
+    }
+
+    function appendFloatingMessage(sender, text) {
+      if (!floatingChatMessages) return;
+      const msgDiv = document.createElement('div');
+      if (sender === 'user') {
+        msgDiv.className = 'flex items-start justify-end gap-2 max-w-[90%] ml-auto';
+        msgDiv.innerHTML = `
+          <div class="bg-forest-800 text-white p-3 rounded-2xl rounded-tr-sm shadow text-xs leading-relaxed">
+            <p>${escapeHtml(text)}</p>
+          </div>
+          <div class="w-6 h-6 rounded-lg bg-forest-100 text-forest-800 flex items-center justify-center shrink-0 text-[10px] font-bold">Anda</div>
+        `;
+      } else {
+        msgDiv.className = 'flex items-start gap-2.5 max-w-[90%]';
+        msgDiv.innerHTML = `
+          <div class="w-6 h-6 rounded-lg bg-forest-700 text-white flex items-center justify-center shrink-0 text-xs shadow">🌱</div>
+          <div class="bg-white p-3 rounded-2xl rounded-tl-sm border border-emerald-100 shadow-sm text-slate-800 text-xs leading-relaxed space-y-1.5">
+            ${formatBotMarkdown(text)}
+          </div>
+        `;
+      }
+      floatingChatMessages.appendChild(msgDiv);
+      floatingChatMessages.scrollTop = floatingChatMessages.scrollHeight;
+    }
+
+    async function handleFloatingChatSubmit(event) {
+      event.preventDefault();
+      const question = floatingChatInput.value.trim();
+      if (!question) return;
+      floatingChatInput.value = '';
+      await processUserChat(question, 'floating');
+    }
+
+    // ==========================================
+    // 9. NEWSLETTER & TOAST NOTIFICATION
+    // ==========================================
+    function handleNewsletter(event) {
+      event.preventDefault();
+      const email = document.getElementById('newsletter-email').value;
+      if (email) {
+        showToast(`🎉 Terima kasih! Surat cinta untuk bumi akan dikirimkan ke ${email}`);
+        document.getElementById('newsletter-email').value = '';
+      }
+    }
+
+    function showToast(message) {
+      const container = document.getElementById('toast-container');
+      const toast = document.createElement('div');
+      toast.className = 'px-4 py-3 rounded-2xl bg-forest-900 text-white text-xs sm:text-sm font-semibold shadow-2xl border border-forest-700 flex items-center gap-2 transform translate-y-4 opacity-0 transition-all duration-300 pointer-events-auto';
+      toast.innerHTML = `<span>${message}</span>`;
+      container.appendChild(toast);
+
+      setTimeout(() => {
+        toast.classList.remove('translate-y-4', 'opacity-0');
+      }, 10);
+
+      setTimeout(() => {
+        toast.classList.add('opacity-0', 'translate-y-2');
+        setTimeout(() => toast.remove(), 300);
+      }, 3500);
+    }
+
+    // ==========================================
+    // 10. ANIMATED NUMBER COUNTERS (INTERSECTION OBSERVER)
+    // ==========================================
+    const counters = document.querySelectorAll('.counter');
+    let hasCounted = false;
+
+    const countObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting && !hasCounted) {
+          hasCounted = true;
+          counters.forEach(counter => {
+            const target = parseFloat(counter.getAttribute('data-target'));
+            const isDecimal = target % 1 !== 0;
+            const duration = 1500;
+            const startTime = performance.now();
+
+            function updateCounter(currentTime) {
+              const elapsed = currentTime - startTime;
+              const progress = Math.min(elapsed / duration, 1);
+              const current = progress * target;
+
+              if (isDecimal) {
+                counter.innerText = current.toFixed(1).replace('.', ',');
+              } else {
+                counter.innerText = Math.floor(current).toString() + (counter.getAttribute('data-target').includes('+') ? '+' : '');
+              }
+
+              if (progress < 1) {
+                requestAnimationFrame(updateCounter);
+              } else {
+                if (isDecimal) {
+                  counter.innerText = target.toFixed(1).replace('.', ',');
+                } else {
+                  counter.innerText = target.toString() + (counter.getAttribute('data-target').includes('+') ? '+' : '');
+                }
+              }
+            }
+            requestAnimationFrame(updateCounter);
+          });
+        }
+      });
+    }, { threshold: 0.3 });
+
+    if (counters.length > 0) {
+      countObserver.observe(counters[0]);
+    }
+  </script>
+</body>
+</html>

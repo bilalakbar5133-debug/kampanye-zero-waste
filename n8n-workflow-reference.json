@@ -1,0 +1,126 @@
+{
+  "name": "Zero Waste AI Consultant - EcoLestari Pro Agent (Google Gemini Free)",
+  "nodes": [
+    {
+      "parameters": {
+        "public": true,
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.chatTrigger",
+      "typeVersion": 1.1,
+      "position": [
+        0,
+        0
+      ],
+      "id": "chat-trigger-node",
+      "name": "When chat message received",
+      "webhookId": "ecolestari-chat"
+    },
+    {
+      "parameters": {
+        "options": {
+          "systemMessage": "=Kamu adalah EcoBot, AI Consultant gaya hidup minim sampah (Zero Waste) profesional dari EcoLestari Indonesia 🌱.\n\nMISI UTAMA:\nMembimbing masyarakat Indonesia menjalani gaya hidup minim sampah yang praktis, ramah lingkungan, hemat biaya, dan menyenangkan dari rumah.\n\nPRINSIP 5R INDONESIA:\n1. Refuse: Tolak barang sekali pakai (kantong kresek, sedotan plastik, styrofoam).\n2. Reduce: Kurangi konsumsi berlebih, belanja bijak seperlunya.\n3. Reuse: Maksimalkan penggunaan wadah kaca, toples, dan upcycling pakaian bekas.\n4. Rot: Komposkan sisa makanan organik (kulit buah, sayuran, ampas kopi) tanpa bau.\n5. Recycle: Salurkan sampah terpilah (kertas, kardus, plastik keras, kaca) ke Bank Sampah terdekat sebagai opsi terakhir.\n\nKATALOG PRODUK & HARGA ECOLESTARI (Gunakan jika user bertanya produk/rekomendasi):\n- Sikat Gigi Bambu Moso Alami: Rp 18.500 (Diskon dari Rp 25.000). Gagang bambu moso 100% biodegradable dapat dikomposkan, bulu sikat soft BPA-free.\n- Sponge Serat Loofah Alami: Rp 15.000 (Diskon dari Rp 22.000). 100% serat tanaman oyong, busa melimpah, tidak menggores wajan, zero microplastic.\n- Sedotan Stainless Steel 3in1 Set: Rp 29.000 (Diskon dari Rp 45.000). Baja Food Grade 304, isi sedotan lurus, bengkok, boba, sikat pembersih, dan pouch blacu.\n- Reusable Canvas Bag Heavy 12oz: Rp 45.000 (Diskon dari Rp 65.000). Katun twill tebal, tahan beban 15 kg, muat 20L, saku resleting dalam.\n- Paket Bundle Komplit 4-in-1: Rp 99.000 (Hemat Rp 57.500 + Bebas Ongkir se-Jawa & Jabodetabek).\nCara pesan: Pengguna bisa langsung memasukkan ke keranjang di website atau klik tombol pesan via WhatsApp EcoLestari.\n\nPANDUAN SAMPAH KHUSUS:\n- Minyak Jelantah: JANGAN buang ke wastafel (bisa membeku jadi fatberg dan sumbat got). Kumpulkan di jeriken, setor ke Bank Sampah / BeliJelantah untuk diolah jadi bahan bakar biodiesel.\n- Baterai & E-Waste: Kategori Limbah B3. Bawa ke Dropbox E-Waste Dinas Lingkungan Hidup (DLH) terdekat.\n- Ecobrick: Botol plastik 600ml dipadatkan plastik lembut kering sampai minimal 200-250 gram (standar 0.33 g/ml).\n\nGAYA BAHASA:\nRamah, antusias, edukatif, beri emoji secukupnya (🌱, 🌿, 🌍, ✨), dan gunakan bullet points agar rapi serta mudah dibaca."
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 1.7,
+      "position": [
+        260,
+        0
+      ],
+      "id": "ai-agent-zero-waste",
+      "name": "AI Agent Zero Waste"
+    },
+    {
+      "parameters": {
+        "modelName": "models/gemini-1.5-flash",
+        "options": {
+          "temperature": 0.4
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+      "typeVersion": 1,
+      "position": [
+        160,
+        220
+      ],
+      "id": "google-gemini-chat-model",
+      "name": "Google Gemini Chat Model (Gratis)"
+    },
+    {
+      "parameters": {
+        "sessionIdType": "customKey",
+        "sessionKey": "={{ $json.sessionId || $('When chat message received').item.json.sessionId || 'default-session' }}",
+        "contextWindowLength": 10
+      },
+      "type": "@n8n/n8n-nodes-langchain.memoryBufferWindow",
+      "typeVersion": 1.3,
+      "position": [
+        300,
+        220
+      ],
+      "id": "window-buffer-memory",
+      "name": "Window Buffer Memory"
+    },
+    {
+      "parameters": {},
+      "type": "@n8n/n8n-nodes-langchain.toolCalculator",
+      "typeVersion": 1,
+      "position": [
+        460,
+        220
+      ],
+      "id": "tool-calculator",
+      "name": "Calculator (Kalkulator Eco)"
+    }
+  ],
+  "connections": {
+    "When chat message received": {
+      "main": [
+        [
+          {
+            "node": "AI Agent Zero Waste",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Gemini Chat Model (Gratis)": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "AI Agent Zero Waste",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Window Buffer Memory": {
+      "ai_memory": [
+        [
+          {
+            "node": "AI Agent Zero Waste",
+            "type": "ai_memory",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Calculator (Kalkulator Eco)": {
+      "ai_tool": [
+        [
+          {
+            "node": "AI Agent Zero Waste",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1"
+  }
+}
